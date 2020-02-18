@@ -1,0 +1,1 @@
+nvidia-smi --query-gpu=temperature.gpu,fan.speed,memory.used,utilization.gpu --format=csv,noheader,nounits | awk -F'[,]' '{ print "%{F#75B5AA}%{F-} "$1"°C"", %{F#75B5AA}%{F-}"$2"%, %{F#DB9E48}%{F-}"$3"MB, %{F#90A959}%{F-}"$4"%"}'
