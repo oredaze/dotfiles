@@ -27,7 +27,8 @@ set wildmode=list:longest,full
 syntax on
 filetype on
 filetype plugin on
-set ttimeoutlen=10 "Remove timeout when leaving insert mode
+autocmd Filetype python setlocal ts=8 sw=8 sts=0 noexpandtab
+set notimeout ttimeout ttimeoutlen=0
 "set hidden "When I close a tab, remove the buffer
 set wrap "Line wrap
 set showcmd "This shows what you are typing as a command
@@ -36,23 +37,37 @@ set mat=2 "How many tenths of a second to blink when matching brackets
 set splitbelow "New split is below
 set splitright "New vsplit is to the right
 set diffopt=vertical "diff in vertical split by default
-set tabstop=6 "Number of spaces of a tab
-set shiftwidth=6 "The size of an indent
+set tabstop=8 "Number of spaces of a tab
+set shiftwidth=8 "The size of an indent
 set noet sts=0 "Disables tab as real space characters
 set noci nopi "Auto indent disabling for copy and paste
+set noautoindent
+set nosmartindent
 set omnifunc=syntaxcomplete#Complete "Set the omnicomplete function
 set completeopt=longest,menuone "Set popup menu
 
 " Enables current cursor line/column highlighting
-set cursorline
+"set cursorline
 "set cursorcolumn
 
+" ### Colorscheme stuff ###
+let g:gruvbox_italic = 0
+let g:gruvbox_underline = 0
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_light = 'soft'
+let g:gruvbox_number_column = 'dark1'
+let g:gruvbox_sign_column = 'dark1'
+let g:gruvbox_invert_selection = 0
+
 if has('gui_running')
-	set guifont=droopy\ 12
-	set guifontwide=Fixed\ Medium\ 13
+	set guifont=droopy\ Medium\ 12
+	"set guifont=VGA\ 14
+	"set guifont=Ubuntu\ Mono\ 13
+	"set guifontwide=IPAGothic\ 10
+	set guifontwide=mplus\ Medium\ 12
 	set guioptions-=T
 	set guioptions-=e
-	set lines=60 columns=95
+	set lines=60 columns=96
 	set guiheadroom=1
 	" let g:lightline = {
 	" 	\ 'colorscheme': 'default',
@@ -73,35 +88,39 @@ if has('gui_running')
 
 	let g:airline_theme = "copycat"
 
-	colorscheme railscasts
+	colorscheme sourcerer
 else
-	colorscheme 8monkeys
+	set mouse=a
+	colorscheme fromthehell
+	let g:airline_theme = "jet"
 endif
 
-" Prefix key emptying
-:nmap <F1> <nop>
-:imap <F1> <nop>
-:cmap <F1> <nop>
-:vmap <F1> <nop>
+" If colorscheme is gruvbox - set airline theme to same
+if g:colors_name == "gruvbox"
+	let g:airline_theme = "gruvbox"
+endif
 
-" ### Colorscheme stuff ###
-let g:gruvbox_italic = 0
-let g:gruvbox_underline = 0
-let g:gruvbox_contrast_dark = 'medium'
-let g:gruvbox_contrast_light = 'soft'
+" #################
+" #### Plugins ####
+" #################
 
 " ### CtrlP Plugin ###
+let g:ctrlp_cmd = 'CtrlP ~'
 set wildignore+=*/.mozilla/*,*/.cache/*,*/.git/*,*/.gnupg/*,*/.local/*,*/.config/vivaldi/*,*/wine64/*,*/wine32/*
 let g:ctrlp_by_filename = 1
 let g:ctrlp_match_window = 'results:30'
-let g:ctrlp_working_path_mode = '0'
+let g:ctrlp_switch_buffer = 'Et'
+let g:ctrlp_tabpage_position = 'al'
+"let g:ctrlp_working_path_mode = '0'
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'min:2'
-let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_types = ['fil', 'mru', 'buf']
-let g:ctrlp_max_depth = 10
+let g:ctrlp_max_depth = 8
 let g:ctrlp_open_new_file = 't' "t h v r
 let g:ctrlp_mruf_max = 100
+let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*'
 let g:ctrlp_prompt_mappings = {
 \ 'ToggleType(1)':  ['<c-right>'],
 \ 'ToggleType(-1)': ['<c-left>'],
@@ -128,13 +147,13 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '☢'
+let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.crypt = 'Cr'
 let g:airline_symbols.paste = 'P:'
 let g:airline_symbols.spell = 'S:'
-let g:airline_symbols.notexists = '☣'
-let g:airline_symbols.whitespace = '☥'
+let g:airline_symbols.notexists = 'Ɇ'
+let g:airline_symbols.whitespace = '⦀'
 let g:airline_inactive_alt_sep=0
 "let g:airline_section_b = '%-0.10{getcwd()}'
 "let g:airline_section_c = '%t'
@@ -148,16 +167,16 @@ let g:airline#extensions#tabline#show_splits=1
 let g:airline#extensions#tabline#show_close_button=0
 let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-nmap <F1>1 <Plug>AirlineSelectTab1
-nmap <F1>2 <Plug>AirlineSelectTab2
-nmap <F1>3 <Plug>AirlineSelectTab3
-nmap <F1>4 <Plug>AirlineSelectTab4
-nmap <F1>5 <Plug>AirlineSelectTab5
-nmap <F1>6 <Plug>AirlineSelectTab6
-nmap <F1>8 <Plug>AirlineSelectTab8
-nmap <F1>9 <Plug>AirlineSelectTab9
-nmap <F1>- <Plug>AirlineSelectPrevTab
-nmap <F1>= <Plug>AirlineSelectNextTab
+nmap <C-W>1 <Plug>AirlineSelectTab1
+nmap <C-W>2 <Plug>AirlineSelectTab2
+nmap <C-W>3 <Plug>AirlineSelectTab3
+nmap <C-W>4 <Plug>AirlineSelectTab4
+nmap <C-W>5 <Plug>AirlineSelectTab5
+nmap <C-W>6 <Plug>AirlineSelectTab6
+nmap <C-W>8 <Plug>AirlineSelectTab8
+nmap <C-W>9 <Plug>AirlineSelectTab9
+nmap <C-W>- <Plug>AirlineSelectPrevTab
+nmap <C-W>= <Plug>AirlineSelectNextTab
 " let g:airline_theme='XX'  "overrides auto theme switcher
 
 " ### Syntastic Pludin ###
@@ -165,7 +184,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let airline#extensions#syntastic#error_symbol = '☤'
+let airline#extensions#syntastic#error_symbol = ''
 
 " ### Completor Plugin ###
 let g:completor_completion_delay = 80
@@ -191,60 +210,118 @@ function! Tab_Or_Complete() abort
 	endif
 endfunction
 
-" ### Hotkeys ###
+" Disable automatic commenting on newline
+autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" ### Devicons plugin ###
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_enable_ctrlp = 1
+let g:WebDevIconsUnicodeDecorateFileNodes = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+if has('gui_running')
+	let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+else
+	let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+endif
+
+" Goyo custom callbacks
+function! s:goyo_enter()
+	:set nonumber norelativenumber
+endfunction
+
+function! s:goyo_leave()
+	:set number relativenumber
+	:augroup numbertoggle
+		:autocmd!
+		:autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+		:autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+	:augroup END
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" #################
+" #### Hotkeys ####
+" #################
+
+:nmap <F1> <nop>
+:imap <F1> <nop>
+:cmap <F1> <nop>
+:vmap <F1> <nop>
+
+" Toggle NERDTree on/off
+nnoremap <F4> :NERDTreeToggle<cr>
+inoremap <F4> <Esc>:NERDTreeToggle<cr>
 " Sycle through vim colorschemes (ScrollColor.vim plugin)
 map <silent><F3> :NEXTCOLOR<cr>
 map <silent><F2> :PREVCOLOR<cr>
+" Set dark/light colorscheme type
+noremap <silent><F5>
+	\ :set background=dark<cr>
+	\ :let g:gruvbox_number_column = 'dark1'<cr>
+	\ :let g:gruvbox_sign_column = 'dark1'<cr>
+noremap <silent><F6>
+	\ :set background=light<cr>
+	\ :let g:gruvbox_number_column = 'light1'<cr>
+	\ :let g:gruvbox_sign_column = 'light1'<cr>
+
+" Toggle Goyo
+nnoremap <C-D> :Goyo<CR>
+inoremap <C-D> <Esc>:Goyo<CR>i
 
 " Paste from clipboard in insert mode
 inoremap <C-V> <C-R>+
 
 noremap <S-J> <C-D>
 noremap <S-K> <C-U>
-noremap <C-J> <PageDown>
-noremap <C-K> <PageUp>
+"noremap <C-J> <PageDown>
+"noremap <C-K> <PageUp>
 noremap - $
 nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
 " Windows & Tabs
-"noremap <F1>- <Esc>:new<CR>
-"noremap <F1>= <Esc>:vnew<CR>
-noremap <F1>s <C-W>s
-noremap <F1>v <C-W>v
-noremap <F1>h <C-W><Left>
-noremap <F1>l <C-W><Right>
-noremap <F1>k <C-W><Up>
-noremap <F1>j <C-W><Down>
-noremap <F1><Left> <C-W><Left>
-noremap <F1><Right> <C-W><Right>
-noremap <F1><Up> <C-W><Up>
-noremap <F1><Down> <C-W><Down>
-noremap <F1>0 <C-W>=
+nnoremap <C-W>t <Esc>:tabnew<CR>
+nnoremap <C-W>[ <Esc>:tabp<CR>
+nnoremap <C-W>] <Esc>:tabn<CR>
+nnoremap <C-W>. <Esc>:bnext<CR>
+nnoremap <C-W>, <Esc>:bprev<CR>
 
-nnoremap <F1>t <Esc>:tabnew<CR>
-nnoremap <F1>c <C-W>c
-nnoremap <F1>[ <Esc>:tabp<CR>
-nnoremap <F1>] <Esc>:tabn<CR>
-
-noremap <F1>n <Esc>:NERDTree<CR>
-noremap <C-N> <Esc>:NERDTree<CR>
-noremap <F1>f <Esc>:CtrlP<CR>
-
-" Move lines up and down (bugged in terminal vim?)
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+" Move lines up and down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <C-Down> :m .+1<CR>==
+nnoremap <C-Up> :m .-2<CR>==
+inoremap <C-Down> <Esc>:m .+1<CR>==gi
+inoremap <C-Up> <Esc>:m .-2<CR>==gi
+vnoremap <C-Down> :m '>+1<CR>gv=gv
+vnoremap <C-Up> :m '<-2<CR>gv=gv
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
 
+" Mouse wheel speedup hack
+:map <ScrollWheelUp> 16<C-Y>
+:map <ScrollWheelDown> 16<C-E>
+
 " Create Blank Newlines and stay in Normal mode
 nnoremap <silent> zj o<Esc>
 nnoremap <silent> zk O<Esc>
+
+" Create brackets
+inoremap ] ]<Esc>i
+inoremap } }<Esc>i
+inoremap ) )<Esc>i
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
@@ -260,15 +337,20 @@ function! <SID>SynStack()
 	echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+	" NB: this supports "rp that replaces the selection by the contents of @r
+vnoremap <silent> <expr> p <sid>Repl()
+
+" ####################
+" #### Misc Stuff ####
+" ####################
+
 " tab and trailing chars...
-set listchars=tab:··,nbsp:¬,trail:«
+"set listchars=tab:❭‧,nbsp:¬,trail:◇
+set listchars=tab:‧‧,nbsp:¬,trail:◇
 set list
 
-" Make the 92th char of a wide line stand out
-call matchadd('ColorColumn', '\%92v', 100)
-
-" NB: this supports "rp that replaces the selection by the contents of @r
-vnoremap <silent> <expr> p <sid>Repl()
+" Make the 80th char of a wide line stand out
+call matchadd('ColorColumn', '\%80v', 100)
 
 " hybrid line numbering +absolute numbering in insert & unfocused
 :set number relativenumber
