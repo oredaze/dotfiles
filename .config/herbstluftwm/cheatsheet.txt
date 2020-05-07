@@ -1,0 +1,82 @@
+--------------------------
+       HERBSTLUFTWM
+        CHEATSHEET
+--------------------------
+
+Herbstluftwm control
+--------------------------
+Super + Ctrl + q          |-Quit Herbstluftwm
+Super + Ctrl + r          |-Restart Herbstluftwm
+Super + Pause             |-Lock the computer
+Super + Shift + c         |-Edit herbst config file
+Super + /                 |-Launch this cheatsheet
+
+Window focusing
+--------------------------
+Super + {arrows}          |-Focus window in the given direction
+Super + {h,j,k,l}         |-Focus window in the given direction
+Super + Tab               |-Cycle through windows in thie frame
+Super + u                 |-Jump to urgent window
+Super + w                 |-Window switching menu (rofi)
+
+Window actions
+--------------------------
+Super + q                 |-Close focused window
+Super + Shift + {arrows}  |-Move the focused window to other frames
+Super + Shift + {h,j,k,l} |-Move the focused window to other frames
+Syper + f                 |-Toggle window floating mode
+Super + z                 |-Toggle focused window full screen(zoom) view
+Super + p                 |-Toggle between pseudotiled and tiled windows
+
+Frame operations
+--------------------------
+Super + s                 |-Automatic Split (longest side)
+Super + c                 |-Close frame
+Super + e                 |-Explode into frames automatically
+Super + Alt + {arrows}    |-Manual splitting by direction
+Super + Alt + {h,j,k,l}   |-Manual splitting by direction
+Super + Ctrl + {arrows}   |-Resize focused frame
+Super + Ctrl + {h,j,k,l}  |-Resize focused frame
+Super + Page Up           |-Rotate all frames counterclockwise
+Super + Page Down         |-Rotate all frames clockwise
+
+Desktop operations
+--------------------------
+Super + {1-6}             |-Switch to the designated workspace
+Super + grave             |-Switch to the last selected workspace
+Super + shift + {1-6}     |-Send focused node to the given desktop
+Super + {comma,period}    |-Decrease or increase the gaps between frames
+Super + shift + f         |-Toggle desktop floating mode
+
+Frame layouts
+--------------------------
+Super + t                 |-Set max layout
+Super + g                 |-Set grid layout
+Super + b                 |-Set horisontal layout
+Super + v                 |-Set vertical layout
+Super + space             |-Cycle layouts
+
+Presplit desktop layouts
+--------------------------
+Super + F1                |-Monad tall
+Super + F2                |-Browser split
+Super + F3                |-3 columns
+Super + F4                |-Grid of 4
+
+Launch application
+--------------------------
+Super + Return            |-Open the default terminal
+Super + r                 |-Run a program (rofi)
+Super + a >>              |-Keychords for apps:
+>>      a                 |-Alacritty
+>>      r                 |-Ranger
+>>      d                 |-DoubleCMD
+>>      f                 |-Firefox
+>>      n                 |-Ncmpcpp
+>>      m                 |-Mixer(pulsemixer)
+>>      t                 |-Tixati
+>>      k                 |-Krita
+>>      c                 |-mComix
+>>      s                 |-Steam
+>>      v                 |-Gvim
+>>      g                 |-Gcolor2

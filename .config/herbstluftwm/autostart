@@ -1,0 +1,264 @@
+#!/usr/bin/env bash
+
+# This is a simple config for herbstluftwm
+
+hc() {
+	herbstclient "$@"
+}
+
+hc emit_hook reload
+
+# Needs to be done before creating tags
+hc set default_frame_layout 2 # 2=max 3=grid
+
+# Sets up adaptive colors
+source "${HOME}/.cache/wal/colors.sh"
+red=$color1
+green=$color2
+yellow=$color3
+blue=$color4
+magenta=$color5
+cyan=$color6
+
+#
+# Geometry
+#
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+hc set frame_gap 0 # Useless gaps
+hc set window_border_width 2
+hc set window_gap -2 # Tiling window border overlap
+hc set window_border_inner_width 0 # Don't touch
+hc set frame_padding 0 # Don't touch
+hc set frame_border_inner_width 0 # Don't touch
+hc set frame_border_width 2 # Outside frame
+hc set frame_transparent_width 5 # If below is true how much frame is left
+hc set frame_bg_transparent true
+hc set always_show_frame false # Display all frames or only focused/used
+hc set frame_active_opacity 50
+hc set frame_normal_opacity 50
+hc set smart_frame_surroundings true # Last frame that is left loses border
+hc set smart_window_surroundings false # Last window that is left loses border
+hc set snap_distance 20
+hc set snap_gap 0
+hc set raise_on_focus true
+hc set raise_on_click true
+hc set focus_follows_mouse false
+hc set focus_stealing_prevention false
+hc set update_dragged_clients 1
+
+#
+# Colors
+#
+# Adaptive
+hc set frame_border_active_color $red
+hc set frame_bg_active_color $red
+hc set window_border_active_color $red
+hc set window_border_urgent_color $magenta
+
+# Red
+#hc set frame_border_active_color '#661108'
+#hc set frame_bg_active_color '#661108'
+#hc set window_border_active_color '#8C180B'
+#hc set window_border_urgent_color '#6C0B8C'
+
+# The rest
+hc set frame_border_inner_color black
+hc set window_border_inner_color black
+hc set window_border_normal_color '#0A0A0A'
+hc set frame_border_normal_color '#0F0F0F'
+hc set frame_bg_normal_color '#0F0F0F'
+
+# Remove all existing keybindings
+hc keyunbind --all
+
+#
+# Keybindings
+#
+Mod=Mod4 # Use the super key as the main modifier
+
+# Herbstluftwm control
+hc keybind $Mod-Control-q     quit
+hc keybind $Mod-Control-r     reload
+hc keybind $Mod-Pause         spawn lock
+hc keybind $Mod-Shift-c       spawn gvim "${HOME}/.config/herbstluftwm/"autostart
+hc keybind $Mod-slash         spawn gvim "${HOME}/.config/herbstluftwm/"cheatsheet.txt
+
+# Window Focusing
+hc keybind $Mod-Left          focus left
+hc keybind $Mod-Down          focus down
+hc keybind $Mod-Up            focus up
+hc keybind $Mod-Right         focus right
+hc keybind $Mod-h             focus left
+hc keybind $Mod-j             focus down
+hc keybind $Mod-k             focus up
+hc keybind $Mod-l             focus right
+hc keybind $Mod-Tab           cycle
+hc keybind $Mod-u             jumpto urgent
+hc keybind $Mod-w             spawn rofistart window
+
+# Window actions
+hc keybind $Mod-q             close
+hc keybind $Mod-Shift-Left    shift left
+hc keybind $Mod-Shift-Down    shift down
+hc keybind $Mod-Shift-Up      shift up
+hc keybind $Mod-Shift-Right   shift right
+hc keybind $Mod-Shift-h       shift left
+hc keybind $Mod-Shift-j       shift down
+hc keybind $Mod-Shift-k       shift up
+hc keybind $Mod-Shift-l       shift right
+hc keybind $Mod-z             fullscreen toggle
+hc keybind $Mod-f             set_attr clients.focus.floating toggle
+hc keybind $Mod-p             pseudotile toggle
+
+# Frame operations
+hc keybind $Mod-s             chain , split auto , cycle_frame 1
+hc keybind $Mod-c             remove
+hc keybind $Mod-Alt-Left      chain , split left 0.5 , focus -e left
+hc keybind $Mod-Alt-Down      chain , split bottom 0.5 , focus -e down
+hc keybind $Mod-Alt-Up        chain , split top 0.5 , focus -e up
+hc keybind $Mod-Alt-Right     chain , split right 0.5 , focus -e right
+hc keybind $Mod-Alt-h         chain , split left 0.5 , focus -e left
+hc keybind $Mod-Alt-j         chain , split bottom 0.5 , focus -e down
+hc keybind $Mod-Alt-k         chain , split top 0.5 , focus -e up
+hc keybind $Mod-Alt-l         chain , split right 0.5 , focus -e right
+hc keybind $Mod-e             split explode
+hc keybind $Mod-Page_Up       chain , lock , rotate , unlock
+hc keybind $Mod-Page_Down     chain , lock , rotate , rotate , rotate , unlock
+# Resizing frames
+resizestep=0.05
+hc keybind $Mod-Control-Left  resize left +$resizestep
+hc keybind $Mod-Control-Down  resize down +$resizestep
+hc keybind $Mod-Control-Up    resize up +$resizestep
+hc keybind $Mod-Control-Right resize right +$resizestep
+hc keybind $Mod-Control-h     resize left +$resizestep
+hc keybind $Mod-Control-j     resize down +$resizestep
+hc keybind $Mod-Control-k     resize up +$resizestep
+hc keybind $Mod-Control-l     resize right +$resizestep
+
+# Tags and desktop operations
+tag_names=( {1..5} )
+tag_keys=( {1..5} 0 )
+
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+	hc add "${tag_names[$i]}"
+	key="${tag_keys[$i]}"
+	if ! [ -z "$key" ] ; then
+		hc keybind "$Mod-$key" use_index "$i"
+		hc keybind "$Mod-Shift-$key" move_index "$i"
+	fi
+done
+
+hc keybind $Mod-grave   use_previous
+
+hc keybind $Mod-period  cycle_value frame_gap 0 5 10 15 20 25 30 35 40
+hc keybind $Mod-comma   cycle_value frame_gap 40 35 30 25 20 15 10 5 0
+
+hc keybind $Mod-Shift-f floating toggle
+
+# Layouting
+hc keybind $Mod-t set_layout max
+hc keybind $Mod-g set_layout grid
+hc keybind $Mod-b set_layout vertical
+hc keybind $Mod-v set_layout horizontal
+
+# The following cycles through the available layouts within a frame, but skips
+# layouts, if the layout change wouldn't affect the actual window positions.
+# I.e. if there are two windows within a frame, the grid layout is skipped.
+hc keybind $Mod-space \
+	or , and . compare tags.focus.curframe_wcount = 2 \
+	. cycle_layout +1 vertical horizontal max \
+	, cycle_layout +1 max grid
+
+# Presplit desktop layouts
+hc keybind $Mod-F1      chain , split right 0.5 , cycle_frame 1 , \
+			split bottom 0.5 , cycle_frame 1 , focus -e left , \
+			split auto , remove
+
+#hc keybind $Mod-F2      chain , split left 0.25 , focus -e left
+hc keybind $Mod-F2      chain , split right 0.70 , focus -e right
+
+hc keybind $Mod-F3      chain , split right 0.333 , cycle_frame 1 , \
+			split right 0.5
+
+hc keybind $Mod-F4      chain , split right 0.5 , cycle_frame 1 , \
+			split bottom 0.5 , cycle_frame 1 , \
+			focus -e left , split top 0.5 , split auto , remove
+
+# Application launching
+hc keybind $Mod-Return  spawn urxvt
+hc keybind $Mod-r       spawn rofistart run
+
+# Set key chord for launching apps
+# Create the array of keys
+app_keys=(a r d f n m t k c s v g)
+# Build the command to unbind the keys
+unbind=(  )
+for k in "${app_keys[@]}" Escape ; do
+	unbind+=( , keyunbind "$k" )
+done
+
+# Set apps to launch
+hc keybind $Mod-a chain \
+	'->' keybind "${app_keys[0]}" chain "${unbind[@]}" , spawn alacritty \
+	'->' keybind "${app_keys[1]}" chain "${unbind[@]}" , spawn urxvt -e ranger \
+	'->' keybind "${app_keys[2]}" chain "${unbind[@]}" , spawn doublecmd \
+	'->' keybind "${app_keys[3]}" chain "${unbind[@]}" , spawn firefox \
+	'->' keybind "${app_keys[4]}" chain "${unbind[@]}" , spawn urxvt -e ncmpcpp \
+	'->' keybind "${app_keys[5]}" chain "${unbind[@]}" , spawn urxvt -e pulsemixer \
+	'->' keybind "${app_keys[6]}" chain "${unbind[@]}" , spawn tixati \
+	'->' keybind "${app_keys[7]}" chain "${unbind[@]}" , spawn krita \
+	'->' keybind "${app_keys[8]}" chain "${unbind[@]}" , spawn mcomix \
+	'->' keybind "${app_keys[9]}" chain "${unbind[@]}" , spawn steam \
+	'->' keybind "${app_keys[10]}" chain "${unbind[@]}" , spawn gvim \
+	'->' keybind "${app_keys[11]}" chain "${unbind[@]}" , spawn gcolor2 \
+	'->' keybind Escape chain "${unbind[@]}"
+
+# Media keys
+hc keybind XF86AudioPlay        spawn mpc toggle
+hc keybind XF86AudioNext        spawn mpc next
+hc keybind XF86AudioPrev        spawn mpc prev
+hc keybind XF86AudioRaiseVolume spawn pamixer -i 5
+hc keybind XF86AudioLowerVolume spawn pamixer -d 5
+
+# Mouse
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+
+#
+# Rules
+#
+hc unrule -F
+hc rule focus=on # Normally focus new clients
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(FULLSCREEN|FS)' fullscreen=on
+hc rule instance='gcolor2' floating=on
+hc rule instance='feh' floating=on
+hc rule instance='nitrogen' floating=on
+hc rule class='Pidgin' floating=on
+hc rule class='Gbdfed' floating=on
+hc rule title='Loading Tixati...' manage=off
+
+hc set tree_style '╾│ ├└╼─┐'
+
+# Default frame layout
+hc set_layout max
+
+# Unlock, just to be sure
+hc unlock
+
+# Do multi monitor setup here, e.g.:
+# hc set_monitors 1280x1024+0+0 1280x1024+1280+0
+# Or simply:
+# hc detect_monitors
+
+# Pads monitor with x pixels
+# ? north east south west
+hc pad 0 0 0 0 0
+
+"${HOME}/.config/herbstluftwm/"autorun.sh
