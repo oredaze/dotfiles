@@ -1,0 +1,14 @@
+toggle_fullscreen f
+save_filelist F
+toggle_aliasing a
+toggle_actions A
+zoom_default F1
+zoom_fit F4
+zoom_in F3
+zoom_out F2
+delete Delete
+prev_img Left
+next_img Right
+toggle_filenames n
+toggle_info i
+close c
