@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source "${HOME}/.cache/wal/colors.sh"
+
+bg=$background
+fg=$foreground
+red=$color1
+magenta=$color5
+border=#0A0A0A
+
+# argument $1 expected to be window/run
+# colors are for		backgrond, foreground, alt bg, sel bg, sel fg
+exec rofi -show $1	-color-window "$bg, $border, $fg" \
+				-color-normal "$bg, $fg, $bg, $fg, $bg" \
+				-color-urgent "$bg, $magenta, $bg, $magenta, $bg" \
+				-color-active "$bg, $red, $bg, $red, $bg" \
