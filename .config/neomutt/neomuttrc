@@ -1,0 +1,110 @@
+set editor="gvim -f"
+set charset = "utf-8"
+set send_charset="us-ascii:utf-8"
+unset imap_passive
+set imap_keepalive = 300
+set mail_check = 240
+set realname = "corvian"
+set from = "2drealm@gmail.com"
+set use_from = yes
+set envelope_from = yes
+set smtp_url = "smtps://2drealm@gmail.com@smtp.gmail.com:465/"
+set imap_user = "2drealm@gmail.com"
+#set smtp_pass = ""
+#set imap_pass = ""
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "imaps://imap.gmail.com:993/INBOX"
+set ssl_force_tls = yes
+set certificate_file=~/.config/mutt/certificates
+
+set mbox = "imaps://imap.gmail.com:993/[Gmail]/All Mail"
+set record = "imaps://imap.gmail.com:993/[Gmail]/Sent Mail"
+set trash = "imaps://imap.gmail.com:993/[Gmail]/Trash"
+set postponed = "imaps://imap.gmail.com:993/[Gmail]/Drafts"
+set postpone = yes
+mailboxes =INBOX =[Gmail]/Drafts ="[Gmail]/Sent Mail" =[Gmail]/Trash
+
+set menu_scroll = yes
+set date_format = "!%a, %d %b, %Y; %I:%M %p"
+set pager_format = "-[ %.20v <%a> ]-[ %s ]-%*-[ %C ]-[ %P ]-"
+set compose_format = "-[ Compose ]-[ Approx. msg size: %l Atts: %a ]%>-"
+set attach_format = "%u%D%I %3n %T%.40d%> [%.7m/%.10M, %.6e%?C?, %C?, %s] "
+set folder_format = "%t %N %6s  %d  %f"
+set index_format = "%4C %Z %{%b %d} %-18.18L ¦ %s"
+set status_format = "-[ %f ]-[ Mails:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Draft:%p?%?b? Inc:%b?%?l? ]-[ %l? ]-%r-%>-[ %P ]-"
+#set sidebar_visible = yes
+set sidebar_width = 12
+set sidebar_folder_indent = no
+set sidebar_short_path = yes
+set sidebar_divider_char = '¦'
+set to_chars = "  TCSL" # remove the plus (second char)
+set tilde = yes
+set pager_stop = yes
+# make the progress updates not that expensive,
+# this will update the bar every 300ms
+set read_inc = 1
+set time_inc = 300
+set wait_key = no # don't prompt for <enter> so much
+set resolve = no # on modifying command move the cursor (def: yes)
+set mark_old = no
+set include = no
+set beep = no
+set suspend = no
+set move = no
+set delete = yes
+set edit_headers = yes
+set abort_unmodified = yes # Open editor immediately on new mail
+set mail_check_stats
+# Decode full urls
+set pipe_decode = yes
+
+#set new_mail_command="notify-send --icon='/home/santiago/Pictures/neomutt.png' \
+#'New Email' '%n new messages, %u unread.' &"
+
+bind index,pager g noop
+bind generic,index,pager,editor z  noop
+bind index,pager d noop
+bind pager <Right> noop
+
+bind index gg first-entry
+bind index G last-entry
+bind index l display-message
+bind index <Right> display-message
+
+bind pager gg  top
+bind pager G   bottom
+bind pager k previous-line
+bind pager j next-line
+bind pager <Up> previous-line
+bind pager <Down> next-line
+bind pager q exit
+bind pager <backspace> exit
+bind pager <Left> exit
+bind pager h exit
+
+bind attach <return> view-mailcap # View attachments properly
+bind compose d detach-file
+macro compose a "<attach-file>?" "Attach"
+
+bind index,pager J half-down
+bind index,pager K   half-up
+bind index,pager r recall-message
+bind index,pager \Ck   sidebar-prev
+bind index,pager \Cj   sidebar-next
+bind index,pager \eOa   sidebar-prev
+bind index,pager \eOb   sidebar-next
+bind index,pager o sidebar-open
+bind index,pager zb sidebar-toggle-visible
+bind index,pager D delete-message
+bind index,pager R sync-mailbox
+macro index,pager b "<change-folder>?" "Go to which box?"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to Inbox"
+macro index,pager gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to Sent Mail"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to Drafts"
+macro index,pager gt "<change-folder>=[Gmail]/Trash<enter>" "Go to Trash"
+
+macro index,pager gu "<pipe-message> urlscan<Enter> q"
+
+macro generic,index,pager,editor zc ":source ~/.config/mutt/muttrc\n" "Reload mutt's configuration file"
+
+source colors.mutt
