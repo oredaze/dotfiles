@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/shin/.vim'
+let g:netrw_dirhist_8='/home/shin/stuff'
+let g:netrw_dirhist_7='/home/shin'
+let g:netrw_dirhist_6='/home/shin/.vim/pack/packages/start/vim-airline/doc'
+let g:netrw_dirhist_5='/home/shin/.vim/pack/packages/start/vim-airline'
+let g:netrw_dirhist_4='/home/shin/.config'
+let g:netrw_dirhist_3='/home/shin'
+let g:netrw_dirhist_2='/home'
+let g:netrw_dirhist_1='/home/shin'
+let g:netrw_dirhist_0='/home/shin/.config'
