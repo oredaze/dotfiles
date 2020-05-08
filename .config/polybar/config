@@ -171,49 +171,49 @@ tail = true
 scroll-up = herbstclient use_index -1 --skip-visible &
 scroll-down = herbstclient use_index +1 --skip-visible &
 
-;[module/i3wm]
-;type = internal/i3
-;format = <label-state> <label-mode>
-;index-sort = true
-;wrapping-scroll = false
-;
-;; Only show workspaces on the same output as the bar
-;pin-workspaces = false
-;
-;label-mode-padding = 1
-;label-mode-foreground = #000
-;label-mode-background = ${colors.red}
-;
-;; focused = Active workspace on focused monitor
-;label-focused = %index%
-;label-focused-foreground = ${colors.red}
-;label-focused-background = ${colors.background}
-;label-focused-underline= ${colors.background}
-;label-focused-padding = 1
-;
-;; unfocused = Inactive workspace on any monitor
-;label-unfocused = %index%
-;label-unfocused-padding = 1
-;
-;; visible = Active workspace on unfocused monitor
-;label-visible = %index%
-;label-visible-foreground = ${colors.yellow}
-;label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
-;label-visible-padding = ${self.label-focused-padding}
-;
-;; urgent = Workspace with urgency hint set
-;label-urgent = %index%
-;label-urgent-background = ${colors.magenta}
-;label-urgent-padding = 1
-;
-;; Separator in between workspaces
-;label-separator = |
-;label-separator-foreground = ${colors.grey}
-;;format-prefix = |
-;;format-prefix-foreground = ${colors.grey}
-;;format-suffix = |
-;;format-suffix-foreground = ${colors.grey}
+[module/i3wm]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = false
+
+label-mode-padding = 1
+label-mode-foreground = #000
+label-mode-background = ${colors.red}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-foreground = ${colors.red}
+label-focused-background = ${colors.background}
+label-focused-underline= ${colors.background}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-foreground = ${colors.yellow}
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.magenta}
+label-urgent-padding = 1
+
+; Separator in between workspaces
+label-separator = |
+label-separator-foreground = ${colors.grey}
+;format-prefix = |
+;format-prefix-foreground = ${colors.grey}
+;format-suffix = |
+;format-suffix-foreground = ${colors.grey}
 
 [module/bspwm]
 type = internal/bspwm
@@ -336,7 +336,7 @@ label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
-interval = 10
+interval = 5
 format-prefix = " "
 format-prefix-foreground = ${colors.yellow}
 label = %mb_used%
@@ -426,7 +426,7 @@ bar-volume-empty-foreground = ${colors.grey}
 
 [module/temp]
 type = internal/temperature
-interval = 7
+interval = 8
 thermal-zone = 0
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
 base-temperature = 30
@@ -526,7 +526,7 @@ content-foreground = ${colors.grey}
 [module/picom]
 type = custom/script
 exec = ~/.config/polybar/scripts/picom.sh
-interval = 17
+interval = 7
 format-prefix = " "
 format-prefix-foreground = ${colors.cyan}
 click-left = ~/.config/polybar/scripts/picom.sh --toggle &
