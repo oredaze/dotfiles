@@ -44,7 +44,7 @@ sh setup.sh
 Log out and in again, then type startx.  
 You will most likely have a fully functional setup like mine.  
   
-Or you can manually move everything and set you wallpaper.  
+Instead of using the script you can manually move everything and set you wallpaper (no point).  
   
 ## Primary software and dependencies:
 - **Shell:** [zsh](https://github.com/zsh-users/zsh) + zsh-autosuggestions
