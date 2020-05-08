@@ -48,7 +48,6 @@ Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline
 - **Music:** mpd + ncmpcpp + mpc (also dependencies for good polybar functionality)
 - **Compositor:** picom (for shadows and transparency)
 - **Launcher:** [rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
-- **Screenlocker:** [i3lock](https://github.com/i3/i3lock) (dependencies for cool screen pixelization: scrot; imagemagick)
 - **Image viewer & wallpaper setter:** feh (set the wallpaper with ranger)
 - **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
   
@@ -71,6 +70,7 @@ I have provided thie one in the screenshot in stuff > walls
 - neofetch (for terminal info)  
 - neomutt (terminal email client)  
 - tmux (terminal multiplexer, my prefix is: Alt-w)
+- i3lock + scrot + imagemagick (for a nice screen locker with pixelated view of your desktop)
 - tridactyl (firefox vim-like extension)
 ------------  
 If you have troubles my mail is: 2drealm(at)gmail.com
