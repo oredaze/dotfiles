@@ -8,6 +8,8 @@ hc() {
 
 hc emit_hook reload
 
+xsetroot -solid '#000000'
+
 # Needs to be done before creating tags
 hc set default_frame_layout 2 # 2=max 3=grid
 
