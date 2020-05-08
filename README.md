@@ -38,18 +38,18 @@ You will most likely have a fully functional setup like mine then.
 
 ## Primary software and dependencies:
 - **Shell:** [zsh](https://github.com/zsh-users/zsh) + zsh-autosuggestions
-- **Window Manager:** [Herbstluftwm](https://herbstluftwm.org/)
-- **Bar:** [Polybar](https://github.com/jaagr/polybar)  
-- **Terminal:** URxvt
-- **Text editor:** Vim  
+- **Window Manager:** [herbstluftwm](https://herbstluftwm.org/)
+- **Bar:** [polybar](https://github.com/jaagr/polybar)  
+- **Terminal:** urxvt
+- **Text editor:** vim  
 Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline), [ctrlP](https://github.com/ctrlpvim/ctrlp.vim), [Supertab](https://github.com/ervandew/supertab), [scrollColor](https://www.vim.org/scripts/script.php?script_id=1488), [color_highlight](http://www.github.com/chrisbra/color_highlight)
-- **File manager:** [Ranger](https://github.com/ranger/ranger)
-- **Music:** Mpd + Ncmpcpp + mpc (also dependencies for good polybar functionality)
-- **Compositor:** Picom (for shadows and transparency)
-- **Launcher:** [Rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
+- **File manager:** [ranger](https://github.com/ranger/ranger)
+- **Music:** mpd + ncmpcpp + mpc (also dependencies for good polybar functionality)
+- **Compositor:** picom (for shadows and transparency)
+- **Launcher:** [rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
 - **Screenlocker:** [i3lock](https://github.com/i3/i3lock) (dependencies for cool screen pixelization: scrot; imagemagick)
-- **Image viewer & wallpaper setter:** Feh (set the wallpaper with ranger)
-- **Color theme generation:** [Pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
+- **Image viewer & wallpaper setter:** feh (set the wallpaper with ranger)
+- **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
   
 ### Additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
