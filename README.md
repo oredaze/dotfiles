@@ -38,12 +38,12 @@ cd into the cloned dir
 ```shell
 cd dotfiles
 ```
-Then make the neccessary files executable & move everything to your home dir with:
+Then run the setup script:
 ```shell
 sh setup.sh
 ```
 Log out and in again, then type startx.  
-You will most likely have a fully functional setup like mine then.
+You will most likely have a fully functional setup like mine.
 
 ## Primary software and dependencies:
 - **Shell:** [zsh](https://github.com/zsh-users/zsh) + zsh-autosuggestions
