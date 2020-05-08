@@ -1,6 +1,6 @@
 # Dotfiles for Linux
-This is a dotfile collection with fully adaptive colors throughout  
-each application featuring the Herbstluft window manager and my custom font.
+This is a dotfile collection with fully adaptive colors throughout each application  
+featuring the Herbstluft window manager and my custom font.
 
 **Preview:**
 ![Screenshot A](https://i.imgur.com/LRoufd9.png)  
