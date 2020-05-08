@@ -4,12 +4,12 @@ set send_charset="us-ascii:utf-8"
 unset imap_passive
 set imap_keepalive = 300
 set mail_check = 240
-set realname = "corvian"
-set from = "2drealm@gmail.com"
+set realname = "your_name"
+set from = "your_mail@gmail.com"
 set use_from = yes
 set envelope_from = yes
-set smtp_url = "smtps://2drealm@gmail.com@smtp.gmail.com:465/"
-set imap_user = "2drealm@gmail.com"
+set smtp_url = "smtps://your_mail@gmail.com@smtp.gmail.com:465/"
+set imap_user = "your_mail@gmail.com"
 #set smtp_pass = ""
 #set imap_pass = ""
 set folder = "imaps://imap.gmail.com:993"
@@ -57,9 +57,6 @@ set abort_unmodified = yes # Open editor immediately on new mail
 set mail_check_stats
 # Decode full urls
 set pipe_decode = yes
-
-#set new_mail_command="notify-send --icon='/home/santiago/Pictures/neomutt.png' \
-#'New Email' '%n new messages, %u unread.' &"
 
 bind index,pager g noop
 bind generic,index,pager,editor z  noop
