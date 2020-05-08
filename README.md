@@ -30,5 +30,5 @@ use [ranger](https://github.com/ranger/ranger) to pick all the colors from an im
 - **Music:** Mpd + Ncmpcpp + mpc (also dependencies for good polybar functionality)
 - **Launcher:** [Rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
 - **Screenlocker:** [i3lock](https://github.com/i3/i3lock)
-- **Image viewer & wallpaper setter:** Feh
-- **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal)
+- **Image viewer & wallpaper setter:** Feh (set wallpaper with ranger)
+- **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
