@@ -43,8 +43,10 @@ Then run the setup script:
 sh setup.sh
 ```
 Log out and in again, then type startx.  
-You will most likely have a fully functional setup like mine.
-
+You will most likely have a fully functional setup like mine.  
+  
+Or you can manually move everything and set you wallpaper.  
+  
 ## Primary software and dependencies:
 - **Shell:** [zsh](https://github.com/zsh-users/zsh) + zsh-autosuggestions
 - **Window Manager:** [herbstluftwm](https://herbstluftwm.org/)
