@@ -20,6 +20,7 @@ Colors changed are: in the terminal, in polybar and its scripts, the window mana
   
 **I have attempted to make this setup usable out of the box as much as possible**  
 **provided you install all the neccessary software listed below**  
+**For best experience you must use my font :)**  
 The easiest way to use this repo is to make a new user (with zsh as your shell) and clone everything  
 directly into your home folder if its empty (with the dot (.) at the end):
 ```shell
@@ -32,7 +33,8 @@ Then set your wallpaper. You will most likely have a fully functional setup like
 - **Window Manager:** [Herbstluftwm](https://herbstluftwm.org/)
 - **Bar:** [polybar](https://github.com/jaagr/polybar)  
 - **Terminal:** URxvt
-- **Text editor:** Vim
+- **Text editor:** Vim  
+Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline), [ctrlP](https://github.com/ctrlpvim/ctrlp.vim), [Supertab](https://github.com/ervandew/supertab), [scrollColor](https://www.vim.org/scripts/script.php?script_id=1488), [color_highlight](http://www.github.com/chrisbra/color_highlight)
 - **File manager:** [Ranger](https://github.com/ranger/ranger)
 - **Music:** Mpd + Ncmpcpp + mpc (also dependencies for good polybar functionality)
 - **Compositor:** Picom (for shadows and transparency)
