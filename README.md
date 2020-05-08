@@ -66,7 +66,7 @@ Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline
 - **Image viewer & wallpaper setter:** feh (set the wallpaper with ranger)
 - **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
   
-### Additional info:
+### Usage and additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
 - To set your colors from a predefined .json file go to it and launch it and reload herbstluftwm  
 (more in .config/wal/colorschemes/dark). This has the best result. Download more schemes [here](https://github.com/dylanaraps/pywal/tree/master/pywal/colorschemes).
