@@ -58,7 +58,8 @@ I have provided thie one in the screenshot in stuff > walls
 - To set your wallpapers; colors and reload everything use "zW" on the wallpaper  
 - The urxvt transparency level is controlled in the ranger files (search for '"90"' or 'wal' and change it)
 - The alacritty terminal is also supported but remove the -a "90" from the ranger files (it buggs the background)
-  
+- Press the meta key + / for a herbstluftwm cheatsheet (launched in gvim)
+
 **A few other nice utilities with provided dot files are:**
 - 8monkeys.vim is an adaptive 8/16 colorscheme for terminal vim; colors work in the tty as well.  
 - additional polybar scripts (you have to enable them yourself & install dependencies)
