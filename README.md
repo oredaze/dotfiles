@@ -4,11 +4,10 @@ featuring the Herbstluft window manager and my custom font.
 
 **Preview:**
 ![Screenshot A](https://i.imgur.com/LRoufd9.png)  
-**With 1 command change all your desktop colors automatically -->**  
+**With 1 command change all your desktop colors automatically**  
 ![Screenshot B](https://i.imgur.com/bP2FbVG.png)  
 This is done with [pywal](https://github.com/dylanaraps/pywal)  
-Either use a .json file with colors (few provided), or 
-use [ranger](https://github.com/ranger/ranger) to pick all the colors from an image (more info below).  
+You can use a predefined colorscheme or use [ranger](https://github.com/ranger/ranger) to pick all the colors from an image (more info below).  
 Colors changed are: in the terminal, in polybar and its scripts, the window manager border and also rofi.
   
 **Preview of my custom bitmap font "droopy" // gvim colorscheme "red_dwarf":**  
@@ -63,7 +62,7 @@ Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline
   
 ### Additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
-- To set your colors from a predefined .json file go to it and launch it and restart herbstluft  
+- To set your colors from a predefined .json file go to it and launch it and reload herbstluftwm  
 (more in .config/wal/colorschemes/dark). This has the best result. Download more schemes [here](https://github.com/dylanaraps/pywal/tree/master/pywal/colorschemes).
 - To steal all the colors from an image go to it and press "zc"
 - To steal all the colors from an image and reload everything go to it and press "zC"
