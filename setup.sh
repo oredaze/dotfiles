@@ -8,8 +8,9 @@ chmod +x .bin/* \
 	.config/ranger/scope.sh
 
 cp -Rn * ~
+cp -Rn .* ~
 rm -Rf ~/.git ~/setup.sh ../dotfiles
 echo '#!/bin/sh' > ~/.fehbg
 echo "feh --bg-fill '/home/$USER/stuff/walls/brown_leaves.png'" >> ~/.fehbg
 chmod +x ~/.fehbg
-echo "Log out and then login again"
+echo "Done. Log out and then login again."
