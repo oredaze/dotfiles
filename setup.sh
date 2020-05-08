@@ -7,8 +7,8 @@ chmod +x .bin/* \
 	.config/ranger/colorschemes/* \
 	.config/ranger/scope.sh
 
-cp -R * ~
-cp -R .* ~
+cp -Rn * ~
+cp -Rn .* ~
 rm -Rf *
 rm -Rf .*
 rm -Rf ~/.git ~/setup.sh
