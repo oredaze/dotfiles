@@ -32,3 +32,10 @@ use [ranger](https://github.com/ranger/ranger) to pick all the colors from an im
 - **Screenlocker:** [i3lock](https://github.com/i3/i3lock)
 - **Image viewer & wallpaper setter:** Feh (set wallpaper with ranger)
 - **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
+  
+### Additional info:
+- To set your wallpaper with ranger go to stuff > walls and press "zw"  
+- To set your colors from a .json file go to it and launch it (enter or right arrow)  
+- To set your colors from an image go to it and press "zc"  
+- To set your colors from an image and reload everything go to it and press "zC"  
+- To set your wallpapers; colors and reload everything use "zW" on the wallpaper    
