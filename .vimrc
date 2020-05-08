@@ -42,8 +42,8 @@ let mapleader = "\<Space>"
 nnoremap <leader> <C-W>
 
 if has('gui_running')
-	set guifont=droopybdf\ 12
-	set guifontwide=mplus\ Medium\ 12
+	set guifont=droopy\ 12
+"	set guifontwide=mplus\ Medium\ 12
 "	set guifont=VGA\ 12
 "	set guifont=Ubuntu\ Mono\ 13
 "	set guifontwide=IPAGothic\ 11
