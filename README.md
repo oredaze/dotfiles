@@ -35,11 +35,11 @@ Then set your wallpaper. You will most likely have a fully functional setup like
 - **Text editor:** Vim
 - **File manager:** [Ranger](https://github.com/ranger/ranger)
 - **Music:** Mpd + Ncmpcpp + mpc (also dependencies for good polybar functionality)
+- **Compositor:** Picom (for shadows and transparency)
 - **Launcher:** [Rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
 - **Screenlocker:** [i3lock](https://github.com/i3/i3lock) (dependencies for cool screen pixelization: scrot; imagemagick)
 - **Image viewer & wallpaper setter:** Feh (set the wallpaper with ranger)
 - **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
-- **Compositor:** Picom (for shadows and transparency)
   
 ### Additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
