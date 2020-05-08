@@ -20,7 +20,7 @@ use [ranger](https://github.com/ranger/ranger) to pick all the colors from an im
 **I have attempted to make this setup usable out of the box as much as possible**  
 **provided you install all the neccessary software listed below**  
 The easiest way to use this repo is to make a new user (with shell as zsh) and clone everything  
-directly into your home folder if its empty:
+directly into your home folder if its empty (with the dot (.) at the end):
 ```shell
 git clone https://github.com/oredaze/dotfiles.git .
 ```
