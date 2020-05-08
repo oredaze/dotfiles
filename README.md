@@ -49,10 +49,9 @@ I have provided thie one in the screenshot in stuff > walls
 - To set your colors from an image go to it and press "zc"
 - To set your colors from an image and reload everything go to it and press "zC"
 - To set your wallpapers; colors and reload everything use "zW" on the wallpaper  
-------------  
-- 8monkeys.vim is an adaptive 8/16 colorscheme for terminal vim; colors work in the tty as well.  
   
 **A few other nice utilities with provided dot files are:**
+- 8monkeys.vim is an adaptive 8/16 colorscheme for terminal vim; colors work in the tty as well.  
 - additional polybar scripts (you have to enable them yourself & install dependencies)
 - neofetch (for terminal info)  
 - neomutt (terminal email client)
