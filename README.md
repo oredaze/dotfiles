@@ -29,9 +29,9 @@ unicode table. You can use the file in the "stuff" directory to copy and paste i
 **provided you install all the neccessary software listed below**  
 **For best experience you must use my insanely awesome font :)**  
 The easiest way to use this repo is to make a new user (with zsh as your shell) and clone everything  
-directly into your home folder if its empty (with the dot (.) at the end):
+then make the neccessary files executable and move everything to your home folder.
 ```shell
-git clone https://github.com/oredaze/dotfiles.git .
+git clone https://github.com/oredaze/dotfiles.git
 ```
 Then log out and in again, then set your wallpaper.  
 You will most likely have a fully functional setup like mine then.
