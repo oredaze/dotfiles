@@ -39,6 +39,7 @@ Then set your wallpaper. You will most likely have a fully functional setup like
 - **Screenlocker:** [i3lock](https://github.com/i3/i3lock) (dependencies for cool screen pixelization: scrot; imagemagick)
 - **Image viewer & wallpaper setter:** Feh (set the wallpaper with ranger)
 - **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
+- **Compositor:** Picom (for shadows and transparency)
   
 ### Additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
@@ -47,6 +48,14 @@ I have provided thie one in the screenshot in stuff > walls
 (found in .config/wal/colorschemes/dark)
 - To set your colors from an image go to it and press "zc"
 - To set your colors from an image and reload everything go to it and press "zC"
-- To set your wallpapers; colors and reload everything use "zW" on the wallpaper
-  
+- To set your wallpapers; colors and reload everything use "zW" on the wallpaper  
+------------  
 - 8monkeys.vim is an adaptive 8/16 colorscheme for terminal vim; colors work in the tty as well.  
+  
+**A few other nice utilities with provided dot files are:**
+- additional polybar scripts (you have to enable them yourself & install dependencies)
+- neofetch (for terminal info)  
+- neomutt (terminal email client)
+- tridactyl (firefox vim-like extension)
+------------  
+If you have troubles my mail is: 2drealm(at)gmail.com
