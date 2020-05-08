@@ -7,6 +7,9 @@ each application featuring the Herbstluft window manager.
 **With 1 command change all your desktop colors automatically**  
 **-->**  
 ![Screenshot B](https://i.imgur.com/bP2FbVG.png)
+This is done with [pywal](https://github.com/dylanaraps/pywal)  
+Either use a .json file with colors (few provided), or 
+use ranger to pick all the colors from an image (more info below).
 
 ## Primary setup and dependencies:
 - **Window Manager:** [Herbstluftwm](https://herbstluftwm.org/)
