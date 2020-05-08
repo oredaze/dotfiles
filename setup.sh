@@ -8,7 +8,6 @@ chmod +x .bin/* \
 	.config/ranger/scope.sh
 
 cp -Rn * ~
-cp -Rn .* ~
 rm -Rf ~/.git ~/setup.sh
 rm -Rf ../dotfiles
 echo '#!/bin/sh' > ~/.fehbg
