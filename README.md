@@ -63,12 +63,11 @@ Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline
   
 ### Additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
-I have provided thie one in the screenshot in stuff > walls
-- To set your colors from a .json file go to it and launch it (enter or right arrow)
-(found in .config/wal/colorschemes/dark) and restart herbst
-- To set your colors from an image go to it and press "zc"
-- To set your colors from an image and reload everything go to it and press "zC"
-- To set your wallpapers; colors and reload everything use "zW" on the wallpaper  
+- To set your colors from a predefined .json file go to it and launch it and restart herbstluft  
+(more in .config/wal/colorschemes/dark). This has the best result. Download more schemes [here](https://github.com/dylanaraps/pywal/tree/master/pywal/colorschemes).
+- To steal all the colors from an image go to it and press "zc"
+- To steal all the colors from an image and reload everything go to it and press "zC"
+- To set your wallpaper, colors and reload everything use "zW" on the wallpaper  
 - The urxvt transparency level is controlled in the ranger files (search for '"90"' or 'wal' and change it)
 - The alacritty terminal is also supported but remove the -a "90" from the ranger files (it buggs the background)
 - Press the meta key + / for a herbstluftwm cheatsheet (launched in gvim)  
