@@ -43,10 +43,10 @@ Then set your wallpaper. You will most likely have a fully functional setup like
 ### Additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
 I have provided thie one in the screenshot in stuff > walls
-- To set your colors from a .json file go to it and launch it (enter or right arrow)  
+- To set your colors from a .json file go to it and launch it (enter or right arrow)
 (found in .config/wal/colorschemes/dark)
-- To set your colors from an image go to it and press "zc"  
-- To set your colors from an image and reload everything go to it and press "zC"  
-- To set your wallpapers; colors and reload everything use "zW" on the wallpaper 
+- To set your colors from an image go to it and press "zc"
+- To set your colors from an image and reload everything go to it and press "zC"
+- To set your wallpapers; colors and reload everything use "zW" on the wallpaper
   
 - 8monkeys.vim is an adaptive 8/16 colorscheme for terminal vim; colors work in the tty as well.  
