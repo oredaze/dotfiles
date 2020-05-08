@@ -76,7 +76,7 @@ Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline
 - 8monkeys.vim is an adaptive 8/16 colorscheme for terminal vim; colors work in the tty as well.  
 - additional polybar scripts (you have to enable them yourself & install dependencies)
 - neofetch (for terminal info)  
-- unimatrix (for the cool matrix effect in your terminal)
+- [unimatrix](https://github.com/will8211/unimatrix) (for the cool matrix effect in your terminal)
 - neomutt (terminal email client)  
 - tmux (terminal multiplexer, my prefix is: Alt-w)
 - i3lock + scrot + imagemagick (for a nice screen locker with pixelated view of your desktop)
