@@ -1,0 +1,42 @@
+# Colors (Tomorrow Night Bright)
+colors:
+  # Default colors
+  primary:
+    background: '#{background.strip}'
+    foreground: '#{foreground.strip}'
+
+    # (Optional) Bright and Dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not present.
+    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # is `false`, the normal foreground color will be used.
+    #
+    # dim_foreground: '0x9a9a9a'
+    # bright_foreground: '0xffffff'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#000000'
+    cursor: '#{cursor.strip}'
+
+  # Normal colors
+  normal:
+    black:   '#{color0.strip}'
+    red:     '#{color1.strip}'
+    green:   '#{color2.strip}'
+    yellow:  '#{color3.strip}'
+    blue:    '#{color4.strip}'
+    magenta: '#{color5.strip}'
+    cyan:    '#{color6.strip}'
+    white:   '#{color7.strip}'
+
+  # Bright colors
+  bright:
+    black:   '#{color8.strip}'
+    red:     '#{color9.strip}'
+    green:   '#{color10.strip}'
+    yellow:  '#{color11.strip}'
+    blue:    '#{color12.strip}'
+    magenta: '#{color13.strip}'
+    cyan:    '#{color14.strip}'
+    white:   '#{color15.strip}'
