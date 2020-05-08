@@ -76,9 +76,6 @@ endif
 " Colorizer - hex color codes plugin
 let g:colorizer_colornames = 0
 
-" Fix python syntax
-let python_highlight_all = 1
-
 " --- Supertab ---
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabLongestHighlight = 1
