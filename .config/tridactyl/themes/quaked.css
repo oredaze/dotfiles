@@ -1,0 +1,56 @@
+:root.TridactylThemeQuaked {
+	--tridactyl-font-family: monospace;
+	--tridactyl-bg: #0A0A0A;
+	--tridactyl-fg: #D8D8D8;
+	--tridactyl-url-fg: #BF6B30;
+
+	/* Selected line */
+	--tridactyl-of-fg: #D1A24E;
+	--tridactyl-of-bg: var(--tridactyl-bg);
+
+	/*new tab spoiler box*/
+	--tridactyl-highlight-box-bg: black;
+
+	/* Hints */
+	--tridactyl-hintspan-font-family: var(--tridactyl-font-family);
+	--tridactyl-hintspan-font-weight: bold;
+	--tridactyl-hintspan-fg: #FFC654;
+	--tridactyl-hintspan-bg: rgba(0, 0, 0, 0.6);
+
+	/* Additional hint elements */
+	--tridactyl-hint-outline: none;
+	--tridactyl-hint-active-outline: none;
+	--tridactyl-hint-active-fg: none;
+	--tridactyl-hint-bg: none;
+	--tridactyl-hint-active-bg: none;
+
+	--tridactyl-cmdl-font-family: var(--tridactyl-font-family);
+	--tridactyl-cmdl-line-height: 1.5;
+
+	--tridactyl-cmplt-font-family: var(--tridactyl-font-family);
+	--tridactyl-cmplt-border-top: 1px solid black;
+	--tridactyl-vs-font-family: var(--tridactyl-font-family);
+}
+
+:root.TridactylThemeQuaked #completions .sectionHeader {
+	display: none;
+}
+
+:root.TridactylThemeQuaked #tridactyl-colon::before {
+	content: "]";
+}
+
+:root.TridactylThemeQuaked #completions .focused,
+:root.TridactylThemeQuaked #completions .focused .url {
+	background: var(--tridactyl-bg);
+	text-decoration: none;
+}
+
+:root.TridactylThemeQuaked #cmdline_iframe {
+	position: fixed !important;
+	bottom: unset;
+	top: -1px !important;
+	left: 0% !important;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px !important;
+	opacity: 1;
+}
