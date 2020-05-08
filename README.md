@@ -26,21 +26,23 @@ unicode table. You can use the file in the "stuff" directory to copy and paste i
   
 ## Install:
 **I have attempted to make this setup usable out of the box as much as possible**  
-**provided you install all the neccessary software listed below**  
+**provided you install all the neccessary software listed below and follow instructions**  
 **For best experience you must use my insanely awesome font :)**  
   
-The easiest way to use this repo is to make a new user (with zsh as your shell) log in with it, and clone everything:  
+The easiest way to use this repo is to make a new user (with zsh as your shell) log in with it,  
+press q to skip .zshrc file setup and clone everything:  
 ```shell
 git clone https://github.com/oredaze/dotfiles.git
 ```
+cd into the cloned dir
 ```shell
 cd dotfiles
 ```
-Then make the neccessary files executable & move everything to your home dir:
+Then make the neccessary files executable & move everything to your home dir with:
 ```shell
 sh setup.sh
 ```
-Log out and in again, then set your wallpaper.  
+Log out and in again, then type startx.  
 You will most likely have a fully functional setup like mine then.
 
 ## Primary software and dependencies:
