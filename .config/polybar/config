@@ -57,7 +57,7 @@ font-1 = misc fixed wide:style=ja:pixelsize=13;1
 ;font-0 = "mplus gothic":size=12;1
 font-2 = droopybdf:pixelsize=12:weight=bold;1
 
-modules-left = start hlwm picom void_updates mail reddit
+modules-left = start hlwm picom
 modules-center =
 modules-right = mpd sep pulseaudio sep wired sep temp corefreq cpu sep memory sep xkeyboard sep date sep
 
@@ -480,17 +480,6 @@ type = custom/script
 exec = ~/.config/polybar/scripts/void_updates.sh
 interval = 600
 ;click-left = urxvt -e sudo xbps-install -Su &
-
-[module/mail]
-type = custom/script
-exec = python3 ~/.config/polybar/scripts/gmail/gmail.py
-interval = 240
-click-left = urxvt -e neomutt &
-
-[module/reddit]
-type = custom/script
-exec = ~/.config/polybar/scripts/reddit.sh
-interval = 700
 
 ;[module/menu]
 ;type = custom/menu
