@@ -15,20 +15,21 @@ use [ranger](https://github.com/ranger/ranger) to pick all the colors from an im
 ![Screenshot C](https://i.imgur.com/wDJlefC.png)  
 **12px click ->**  
 ![Screenshot D](https://i.imgur.com/kScUPSR.png)  
-2 versions of the font are provided: bdf(droopybdf) and  
-otb(for compatibility with pango 1.44+)
+2 versions of the font are provided: bdf(droopybdf) and otb(for compatibility with pango 1.44+)  
   
 **I have attempted to make this setup usable out of the box as much as possible**  
 **provided you install all the neccessary software listed below**  
 
 ## Primary setup and dependencies:
+- **Shell:** [zsh](https://github.com/zsh-users/zsh)
+-- zsh-autosuggestions
 - **Window Manager:** [Herbstluftwm](https://herbstluftwm.org/)
-- **Bar:** [polybar](https://github.com/jaagr/polybar)
+- **Bar:** [polybar](https://github.com/jaagr/polybar)  
 - **Terminal:** URxvt
 - **Text editor:** Vim
 - **File manager:** [Ranger](https://github.com/ranger/ranger)
-- **:**
-- **:**
+- **Music:** Mpd + Ncmpcpp + mpc (also dependencies for good polybar functionality)
+- **Launcher:** [Rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
 - **:**
 - **:**
 - **:**
