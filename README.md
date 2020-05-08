@@ -36,15 +36,17 @@ Then set your wallpaper. You will most likely have a fully functional setup like
 - **File manager:** [Ranger](https://github.com/ranger/ranger)
 - **Music:** Mpd + Ncmpcpp + mpc (also dependencies for good polybar functionality)
 - **Launcher:** [Rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
-- **Screenlocker:** [i3lock](https://github.com/i3/i3lock) (dependencies for cool screen pixelisation: scrot; imagemagick)
-- **Screenshot util:** scrot
-- **Image viewer & wallpaper setter:** Feh (set wallpaper with ranger)
+- **Screenlocker:** [i3lock](https://github.com/i3/i3lock) (dependencies for cool screen pixelization: scrot; imagemagick)
+- **Image viewer & wallpaper setter:** Feh (set the wallpaper with ranger)
 - **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
   
 ### Additional info:
 - To set your wallpaper with ranger go to it and press "zw"  
 I have provided thie one in the screenshot in stuff > walls
 - To set your colors from a .json file go to it and launch it (enter or right arrow)  
+(found in .config/wal/colorschemes/dark)
 - To set your colors from an image go to it and press "zc"  
 - To set your colors from an image and reload everything go to it and press "zC"  
-- To set your wallpapers; colors and reload everything use "zW" on the wallpaper    
+- To set your wallpapers; colors and reload everything use "zW" on the wallpaper 
+  
+- 8monkeys.vim is an adaptive 8/16 colorscheme for terminal vim; colors work in the tty as well.  
