@@ -9,8 +9,14 @@ each application featuring the Herbstluft window manager and my custom font.
 ![Screenshot B](https://i.imgur.com/bP2FbVG.png)
 This is done with [pywal](https://github.com/dylanaraps/pywal)  
 Either use a .json file with colors (few provided), or 
-use [ranger](https://github.com/ranger/ranger) to pick all the colors from an image (more info below).
-
+use [ranger](https://github.com/ranger/ranger) to pick all the colors from an image (more info below).  
+  
+**Preview of my custom bitmap font // gvim colorscheme "red_dwarf":**  
+**14px**  
+![Screenshot C](https://i.imgur.com/wDJlefC.png)  
+**12px**  
+![Screenshot D](https://i.imgur.com/kScUPSR.png)  
+  
 ## Primary setup and dependencies:
 - **Window Manager:** [Herbstluftwm](https://herbstluftwm.org/)
 - **Bar:** [polybar](https://github.com/jaagr/polybar)
