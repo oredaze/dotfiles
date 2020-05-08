@@ -33,8 +33,14 @@ The easiest way to use this repo is to make a new user (with zsh as your shell) 
 ```shell
 git clone https://github.com/oredaze/dotfiles.git
 ```
-Make the neccessary files executable and move everything to your home folder.
-Then log out and in again, then set your wallpaper.  
+```shell
+cd dotfiles
+```
+Then make the neccessary files executable & move everything to your home dir:
+```shell
+sh setup.sh
+```
+Log out and in again, then set your wallpaper.  
 You will most likely have a fully functional setup like mine then.
 
 ## Primary software and dependencies:
