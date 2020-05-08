@@ -27,7 +27,7 @@ git clone https://github.com/oredaze/dotfiles.git .
 ```
 Then set your wallpaper. You will most likely have a fully functional setup like mine then.
 
-## Primary setup and dependencies:
+## Primary software and dependencies:
 - **Shell:** [zsh](https://github.com/zsh-users/zsh) + zsh-autosuggestions
 - **Window Manager:** [Herbstluftwm](https://herbstluftwm.org/)
 - **Bar:** [polybar](https://github.com/jaagr/polybar)  
@@ -36,7 +36,8 @@ Then set your wallpaper. You will most likely have a fully functional setup like
 - **File manager:** [Ranger](https://github.com/ranger/ranger)
 - **Music:** Mpd + Ncmpcpp + mpc (also dependencies for good polybar functionality)
 - **Launcher:** [Rofi](https://github.com/DaveDavenport/rofi) (also dependency for polybar popup menues)
-- **Screenlocker:** [i3lock](https://github.com/i3/i3lock)
+- **Screenlocker:** [i3lock](https://github.com/i3/i3lock) (dependencies for cool screen pixelisation: scrot; imagemagick)
+- **Screenshot util:** scrot
 - **Image viewer & wallpaper setter:** Feh (set wallpaper with ranger)
 - **Color theme generation:** [pywal](https://github.com/dylanaraps/pywal) (set adaptive colors with ranger)
   
