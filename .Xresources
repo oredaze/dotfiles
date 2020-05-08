@@ -68,13 +68,13 @@ URxvt.keysym.Control-BackSpace: \033[1;H
 URxvt.keysym.S-Up:              command:\033]720;3\007
 URxvt.keysym.S-Down:            command:\033]721;3\007
 
-URxvt*font: -hacker-droopybdf-medium-*-*-*-12-*-*-*-*-*-*-*, \
+URxvt*font: -*-droopybdf-medium-*-*-*-12-*-*-*-*-*-*-*, \
 		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
-URxvt*boldFont: -hacker-droopybdf-bold-*-*-*-12-*-*-*-*-*-*-*, \
+URxvt*boldFont: -*-droopybdf-bold-*-*-*-12-*-*-*-*-*-*-*, \
 		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
-URxvt*italicFont: -hacker-droopybdf-medium-*-*-*-12-*-*-*-*-*-*-*, \
+URxvt*italicFont: -*-droopybdf-medium-*-*-*-12-*-*-*-*-*-*-*, \
 		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
-URxvt*boldItalicFont: -hacker-droopybdf-bold-*-*-*-12-*-*-*-*-*-*-*, \
+URxvt*boldItalicFont: -*-droopybdf-bold-*-*-*-12-*-*-*-*-*-*-*, \
 		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
 
 !URxvt*font: xft:droopy:Medium:autohint=false:size=12, \
