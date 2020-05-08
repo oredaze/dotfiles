@@ -7,7 +7,7 @@ chmod +x .bin/* \
 	.config/ranger/colorschemes/* \
 	.config/ranger/scope.sh
 
-mv * ..
+mv * ~
 cd ..
 rm -r dotfiles
 print "Log out, back in and startx"
