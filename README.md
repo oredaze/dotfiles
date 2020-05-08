@@ -19,7 +19,7 @@ Colors changed are: in the terminal, in polybar and its scripts, the window mana
 2 versions of the font are provided: bdf(droopybdf) and otb(for compatibility with pango 1.44+)  
 Note that not all available glyphs are included in the preview. Also when I was making the font  
 I didn't think that I would be releasing it so some of the nice icons may be out of place in the  
-unicode table.
+unicode table. You can use the file in the "stuff" directory to copy and paste icons.
   
 **I have attempted to make this setup usable out of the box as much as possible**  
 **provided you install all the neccessary software listed below**  
