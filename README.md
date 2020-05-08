@@ -17,7 +17,9 @@ Colors changed are: in the terminal, in polybar and its scripts, the window mana
 **12px click ->**  
 ![Screenshot D](https://i.imgur.com/kScUPSR.png)  
 2 versions of the font are provided: bdf(droopybdf) and otb(for compatibility with pango 1.44+)  
-Note that not all available glyphs are included in the preview. Also when I was making the font  
+Note: In some applications my font sizes is recognized wrong. Still works, it's just annoying.
+If anyone knows how to fix that let me know. (email at the bottom)  
+Note2: Not all available glyphs are included in the preview. Also when I was making the font  
 I didn't think that I would be releasing it so some of the nice icons may be out of place in the  
 unicode table. You can use the file in the "stuff" directory to copy and paste icons.
   
