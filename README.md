@@ -6,7 +6,7 @@ featuring the Herbstluft window manager and my custom font.
 ![Screenshot A](https://i.imgur.com/LRoufd9.png)  
 **With 1 command change all your desktop colors automatically**  
 ![Screenshot B](https://i.imgur.com/bP2FbVG.png)  
-This is done with [pywal](https://github.com/dylanaraps/pywal)  
+This is done with [pywal](https://github.com/dylanaraps/pywal) and a bit of tweaking in my dotfiles.  
 You can use a predefined colorscheme or use [ranger](https://github.com/ranger/ranger) to pick all the colors from an image (more info below).  
 Colors changed are: in the terminal, in polybar and its scripts, the window manager border and also rofi.
   
