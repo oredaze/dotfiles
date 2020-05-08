@@ -21,6 +21,7 @@ Note that not all available glyphs are included in the preview. Also when I was 
 I didn't think that I would be releasing it so some of the nice icons may be out of place in the  
 unicode table. You can use the file in the "stuff" directory to copy and paste icons.
   
+## Install:
 **I have attempted to make this setup usable out of the box as much as possible**  
 **provided you install all the neccessary software listed below**  
 **For best experience you must use my font :)**  
