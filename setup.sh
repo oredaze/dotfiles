@@ -8,6 +8,3 @@ chmod +x .bin/* \
 	.config/ranger/scope.sh
 
 mv * ~
-cd ..
-rm -r dotfiles
-print "Log out, back in and startx"
