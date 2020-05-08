@@ -7,15 +7,17 @@ You can switch the colors of everything on the fly with a single command.
 ![Screenshot A](https://i.imgur.com/LRoufd9.png)  
 **Launch the magic and...**  
 ![Screenshot B](https://i.imgur.com/bP2FbVG.png)  
+**Or the wallaper magic:**  
+![Screenshot C](https://i.imgur.com/vZqSRTk.png)  
 This is done with [pywal](https://github.com/dylanaraps/pywal) and a bit of tweaking in my dotfiles.  
 You can use a predefined colorscheme or use [ranger](https://github.com/ranger/ranger) to pick all the colors from an image (more info below).  
 Colors changed are: in the terminal, in polybar and its scripts, the window manager border and also rofi.
   
 **Preview of my custom bitmap font "droopy" // gvim colorscheme "red_dwarf":**  
 **14px click ->**  
-![Screenshot C](https://i.imgur.com/wDJlefC.png)  
+![Screenshot D](https://i.imgur.com/wDJlefC.png)  
 **12px click ->**  
-![Screenshot D](https://i.imgur.com/kScUPSR.png)  
+![Screenshot E](https://i.imgur.com/kScUPSR.png)  
 2 versions of the font are provided: bdf(droopybdf) and otb(for compatibility with pango 1.44+)  
 (Look at: .local/share/fonts)
 Note: In some applications my font sizes are recognized as different numbers. Still works, it's just annoying.
