@@ -59,7 +59,7 @@ font-2 = droopy:pixelsize=12:weight=bold;1
 
 modules-left = start hlwm picom
 modules-center =
-modules-right = mpd sep pulseaudio sep wired sep temp corefreq cpu sep memory sep xkeyboard sep date sep
+modules-right = mpd sep pulseaudio sep wired sep temp cpu sep memory sep xkeyboard sep date sep
 
 ;separator = |
 
