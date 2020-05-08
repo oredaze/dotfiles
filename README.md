@@ -19,11 +19,12 @@ use [ranger](https://github.com/ranger/ranger) to pick all the colors from an im
   
 **I have attempted to make this setup usable out of the box as much as possible**  
 **provided you install all the neccessary software listed below**  
-The easiest way to use this repo is to make a new user (with shell as zsh) and clone everything  
+The easiest way to use this repo is to make a new user (with zsh as your shell) and clone everything  
 directly into your home folder if its empty (with the dot (.) at the end):
 ```shell
 git clone https://github.com/oredaze/dotfiles.git .
 ```
+Then set your wallpaper. You will most likely have a fully functional setup like mine then.
 
 ## Primary setup and dependencies:
 - **Shell:** [zsh](https://github.com/zsh-users/zsh) + zsh-autosuggestions
