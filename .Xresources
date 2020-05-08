@@ -68,22 +68,9 @@ URxvt.keysym.Control-BackSpace: \033[1;H
 URxvt.keysym.S-Up:              command:\033]720;3\007
 URxvt.keysym.S-Down:            command:\033]721;3\007
 
-URxvt*font: -*-droopybdf-medium-*-*-*-12-*-*-*-*-*-*-*, \
-		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
-URxvt*boldFont: -*-droopybdf-bold-*-*-*-12-*-*-*-*-*-*-*, \
-		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
-URxvt*italicFont: -*-droopybdf-medium-*-*-*-12-*-*-*-*-*-*-*, \
-		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
-URxvt*boldItalicFont: -*-droopybdf-bold-*-*-*-12-*-*-*-*-*-*-*, \
-		-*-fixed-*-*-*-*-14-*-*-*-*-*-jisx0208.1983-*
-
-!URxvt*font: xft:droopy:Medium:autohint=false:size=12, \
-!		xft:mplus:Medium:autohint=false:size=12
-!URxvt*boldFont: xft:droopy:Bold:autohint=false:bold:size=12, \
-!		xft:mplus:Bold:autohint=false:size=12
-!URxvt*italicFont: xft:droopy:Medium:autohint=false:size=12, \
-!		xft:mplus:Medium:autohint=false:size=12
-!URxvt*boldItalicFont: xft:droopy:Bold:autohint=false:bold:size=12, \
-!		xft:mplus:Bold:autohint=false:size=12
+URxvt*font: xft:droopybdf:Medium:autohint=false:size=10
+URxvt*boldFont: xft:droopybdf:Bold:autohint=false:bold:size=10
+URxvt*italicFont: xft:droopybdf:Medium:autohint=false:size=10
+URxvt*boldItalicFont: xft:droopybdf:Bold:autohint=false:bold:size=10
 
 #include ".cache/wal/colors.Xresources"
