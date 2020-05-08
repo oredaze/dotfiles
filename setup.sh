@@ -9,7 +9,8 @@ chmod +x .bin/* \
 
 cp -R * ~/
 cp -R .* ~/
-rm -Rf ~/dotfiles
+rm -Rf *
+rm -Rf .*
 echo "#\!/bin/sh" > ~/.fehbg
 echo "feh --bg-fill '/home/$USER/stuff/walls/brown_leaves.png'" >> ~/.fehbg
 chmod +x ~/.fehbg
