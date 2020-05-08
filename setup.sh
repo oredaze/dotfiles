@@ -7,7 +7,9 @@ chmod +x .bin/* \
 	.config/ranger/colorschemes/* \
 	.config/ranger/scope.sh
 
-mv * ~
+cp -R * ~/
+cp -R .* ~/
+rm -Rf ~/dotfiles
 echo "#\!/bin/sh" > ~/.fehbg
 echo "feh --bg-fill '/home/$USER/stuff/walls/brown_leaves.png'" >> ~/.fehbg
 chmod +x ~/.fehbg
