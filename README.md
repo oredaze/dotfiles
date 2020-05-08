@@ -30,7 +30,8 @@ directly into your home folder if its empty (with the dot (.) at the end):
 ```shell
 git clone https://github.com/oredaze/dotfiles.git .
 ```
-Then set your wallpaper. You will most likely have a fully functional setup like mine then.
+Then log out and in again, then set your wallpaper.  
+You will most likely have a fully functional setup like mine then.
 
 ## Primary software and dependencies:
 - **Shell:** [zsh](https://github.com/zsh-users/zsh) + zsh-autosuggestions
