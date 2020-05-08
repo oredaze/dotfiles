@@ -1,0 +1,223 @@
+" General Settings
+set configversion 1.9
+set update.lastchecktime 1587667516448
+set update.checkintervalsecs 86400
+set searchurls.qwant https://www.qwant.com/?q=
+set minincsearchlen 2
+set tabopenpos last
+set hintchars weasdfcv
+set hintuppercase false
+set modeindicator false
+set visualenterauto false
+set newtab about:blank
+set customthemes.quaked :root.TridactylThemeQuaked {
+	--tridactyl-font-family: monospace;
+	--tridactyl-bg: #0A0A0A;
+	--tridactyl-fg: #D8D8D8;
+	--tridactyl-url-fg: #BF6B30;
+
+	/* Selected line */
+	--tridactyl-of-fg: #D1A24E;
+	--tridactyl-of-bg: var(--tridactyl-bg);
+
+	/*new tab spoiler box*/
+	--tridactyl-highlight-box-bg: black;
+
+	/* Hints */
+	--tridactyl-hintspan-font-family: var(--tridactyl-font-family);
+	--tridactyl-hintspan-font-weight: bold;
+	--tridactyl-hintspan-fg: #FFC654;
+	--tridactyl-hintspan-bg: rgba(0, 0, 0, 0.6);
+
+	/* Additional hint elements */
+	--tridactyl-hint-outline: none;
+	--tridactyl-hint-active-outline: none;
+	--tridactyl-hint-active-fg: none;
+	--tridactyl-hint-bg: none;
+	--tridactyl-hint-active-bg: none;
+
+	--tridactyl-cmdl-font-family: var(--tridactyl-font-family);
+	--tridactyl-cmdl-line-height: 1.5;
+
+	--tridactyl-cmplt-font-family: var(--tridactyl-font-family);
+	--tridactyl-cmplt-border-top: 1px solid black;
+	--tridactyl-vs-font-family: var(--tridactyl-font-family);
+}
+
+:root.TridactylThemeQuaked #completions .sectionHeader {
+	display: none;
+}
+
+:root.TridactylThemeQuaked #tridactyl-colon::before {
+	content: "]";
+}
+
+:root.TridactylThemeQuaked #completions .focused,
+:root.TridactylThemeQuaked #completions .focused .url {
+	background: var(--tridactyl-bg);
+	text-decoration: none;
+}
+
+:root.TridactylThemeQuaked #cmdline_iframe {
+	position: fixed !important;
+	bottom: unset;
+	top: -1px !important;
+	left: 0% !important;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px !important;
+	opacity: 1;
+}
+
+
+set theme quaked
+
+" Binds
+bind 0 zoom 1
+bind [c urlincrement -1
+bind ]c urlincrement 1
+bind <C-x> urlincrement -1
+bind <C-a> urlincrement 1
+bind T current_url tabopen
+bind yy clipboard yank
+bind ys clipboard yankshort
+bind yc clipboard yankcanon
+bind ym clipboard yankmd
+bind yt clipboard yanktitle
+bind gh home
+bind gH home true
+bind p clipboard open
+bind P clipboard tabopen
+bind j scrollline 6
+bind <C-e> scrollline 10
+bind k scrollline -6
+bind <C-y> scrollline -10
+bind G scrollto 100
+bind gg scrollto 0
+bind <C-u> scrollpage -0.5
+bind <C-d> scrollpage 0.5
+bind <C-f> scrollpage 1
+bind <C-b> scrollpage -1
+bind $ scrollto 100 x
+bind ^ scrollto 0 x
+bind <C-6> tab #
+bind <C-^> tab #
+bind H back
+bind L forward
+bind <C-o> jumpprev
+bind <C-i> jumpnext
+bind D composite tabprev; tabclose #
+bind gx0 tabclosealltoleft
+bind gx$ tabclosealltoright
+bind << tabmove -1
+bind >> tabmove +1
+bind u undo
+bind U undo window
+bind r reload
+bind R reloadhard
+bind x stop
+bind gi focusinput -l
+bind g? rot13
+bind g; changelistjump -1
+bind gt tabnext_gt
+bind gT tabprev
+bind g^ tabfirst
+bind g0 tabfirst
+bind g$ tablast
+bind gr reader
+bind gu urlparent
+bind gU urlroot
+bind gf viewsource
+bind : fillcmdline_notrail
+bind s fillcmdline open search
+bind S fillcmdline tabopen search
+bind M gobble 1 quickmark
+bind ZZ qall
+bind f hint
+bind gF hint -qb
+bind ;i hint -i
+bind ;b hint -b
+bind ;o hint
+bind ;I hint -I
+bind ;k hint -k
+bind ;y hint -y
+bind ;p hint -p
+bind ;P hint -P
+bind ;r hint -r
+bind ;s hint -s
+bind ;S hint -S
+bind ;a hint -a
+bind ;A hint -A
+bind ;; hint -;
+bind ;# hint -#
+bind ;v hint -W mpvsafe
+bind ;w hint -w
+bind ;t hint -W tabopen
+bind ;O hint -W fillcmdline_notrail open
+bind ;W hint -W fillcmdline_notrail winopen
+bind ;T hint -W fillcmdline_notrail tabopen
+bind ;z hint -z
+bind ;m composite hint -pipe img src | js -p tri.excmds.open('images.google.com/searchbyimage?image_url=' + JS_ARG)
+bind ;M composite hint -pipe img src | jsb -p tri.excmds.tabopen('images.google.com/searchbyimage?image_url=' + JS_ARG)
+bind ;gi hint -qi
+bind ;gI hint -qI
+bind ;gk hint -qk
+bind ;gy hint -qy
+bind ;gp hint -qp
+bind ;gP hint -qP
+bind ;gr hint -qr
+bind ;gs hint -qs
+bind ;gS hint -qS
+bind ;ga hint -qa
+bind ;gA hint -qA
+bind ;g; hint -q;
+bind ;g# hint -q#
+bind ;gv hint -qW mpvsafe
+bind ;gw hint -qw
+bind ;gb hint -qb
+bind ;gF hint -qb
+bind ;gf hint -q
+bind <S-Insert> mode ignore
+bind <AC-Escape> mode ignore
+bind <AC-`> mode ignore
+bind <S-Escape> mode ignore
+bind <Escape> composite mode normal ; hidecmdline
+bind <C-[> composite mode normal ; hidecmdline
+bind A bmark
+bind zi zoom 0.1 true
+bind zo zoom -0.1 true
+bind zm zoom 0.5 true
+bind zM zoom 0.5 true
+bind <F1> tabprev
+bind <F2> tabnext
+bind q tabclose
+bind d tabduplicate
+bind ` tab #
+bind = zoom 0.1 true
+bind - zoom -0.1 true
+bind i focusinput -l
+bind a focusinput -l
+bind h tabprev
+bind l tabnext
+bind J scrollpage 0.5
+bind K scrollpage -0.5
+bind w fillcmdline tab
+bind b fillcmdline bmarks -t
+bind B composite get_current_url | fillcmdline bmark
+bind zp pin
+bind zr reader
+bind F hint -t
+bind <A-p> pin
+bind <A-m> mute toggle
+bind o fillcmdline open
+bind O current_url open
+bind W current_url winopen
+bind t fillcmdline tabopen
+bind ]] followpage next
+bind [[ followpage prev
+bind zR zoom -0.5 true
+bind zz zoom 1
+bind zI zoom 3
+bind zO zoom 0.3
+bind . repeat
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
