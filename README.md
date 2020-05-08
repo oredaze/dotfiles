@@ -47,7 +47,7 @@ Plugins used in the .vimrc: [Airline](https://github.com/vim-airline/vim-airline
 - To set your wallpaper with ranger go to it and press "zw"  
 I have provided thie one in the screenshot in stuff > walls
 - To set your colors from a .json file go to it and launch it (enter or right arrow)
-(found in .config/wal/colorschemes/dark)
+(found in .config/wal/colorschemes/dark) and restart herbst
 - To set your colors from an image go to it and press "zc"
 - To set your colors from an image and reload everything go to it and press "zC"
 - To set your wallpapers; colors and reload everything use "zW" on the wallpaper  
