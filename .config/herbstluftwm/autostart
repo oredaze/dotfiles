@@ -25,7 +25,7 @@ cyan=$color6
 #
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_gap 0 # Useless gaps
+hc set frame_gap 10 # Useless gaps
 hc set window_border_width 2
 hc set window_gap -2 # Tiling window border overlap
 hc set window_border_inner_width 0 # Don't touch
