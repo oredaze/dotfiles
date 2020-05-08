@@ -9,6 +9,7 @@ each application featuring the Herbstluft window manager and my custom font.
 This is done with [pywal](https://github.com/dylanaraps/pywal)  
 Either use a .json file with colors (few provided), or 
 use [ranger](https://github.com/ranger/ranger) to pick all the colors from an image (more info below).  
+Colors changed are: in the terminal, in polybar and its scripts, the window manager border and also rofi.
   
 **Preview of my custom bitmap font "droopy" // gvim colorscheme "red_dwarf":**  
 **14px click ->**  
