@@ -1,0 +1,208 @@
+" General Settings
+set configversion 2.0
+set update.checkintervalsecs 86400
+set update.lastchecktime 1597790056788
+set update.lastnaggedversion 1.14.0
+set update.nag true
+set update.nagwait 7
+
+set hintchars wersdfcvlkj
+set hintuppercase false
+set homepages ["https://oredaze.github.io/homepage/"]
+set minincsearchlen 2
+set modeindicator false
+set smoothscroll true
+set tabopenpos last
+set visualenterauto false
+set allowautofocus false
+
+" Binds
+bind 0 zoom 1
+bind $ scrollto 100 x
+bind - zoom -0.1 true
+bind [ tabprev
+bind ] tabnext
+bind , back
+bind . forward
+bind : fillcmdline_notrail
+bind ;# hint -#
+bind ;; hint -; *
+bind ;A hint -A
+bind ;I hint -i
+bind ;M composite hint -pipe img src | jsb -p tri.excmds.tabopen('images.google.com/searchbyimage?image_url=' + JS_ARG)
+bind ;O hint -W fillcmdline_notrail open
+bind ;P hint -P
+bind ;S hint -S
+bind ;T hint -W fillcmdline_notrail tabopen
+bind ;W hint -W fillcmdline_notrail winopen
+bind ;a hint -a
+bind ;b hint -b
+bind ;g# hint -q#
+bind ;g; hint -q;
+bind ;gA hint -qA
+bind ;gF hint -qb
+bind ;gI hint -qI
+bind ;gP hint -qP
+bind ;gS hint -qS
+bind ;ga hint -qa
+bind ;gb hint -qb
+bind ;gf hint -q
+bind ;gi hint -qi
+bind ;gk hint -qk
+bind ;gp hint -qp
+bind ;gr hint -qr
+bind ;gs hint -qs
+bind ;gv hint -qW mpvsafe
+bind ;gw hint -qw
+bind ;gy hint -qy
+bind ;h hint -h
+bind ;i hint -I
+bind ;k hint -k
+bind ;m composite hint -pipe img src | js -p tri.excmds.open('images.google.com/searchbyimage?image_url=' + JS_ARG)
+bind ;o hint
+bind ;p hint -p
+bind ;r hint -r
+bind ;s hint -a
+bind ;t hint -W tabopen
+bind ;v hint -W mpvsafe
+bind ;w hint -w
+bind ;y hint -y
+bind ;z hint -z
+bind << tabmove -1
+bind <A-m> mute toggle
+bind <A-p> pin
+bind <AC-Escape> mode ignore
+bind <AC-`> mode ignore
+bind <C-[> composite mode normal ; hidecmdline
+bind <C-a> urlincrement 1
+bind <C-b> fillcmdline tab
+bind <C-d> scrollpage 0.5
+bind <C-e> scrollline 10
+unbind <C-f>
+bind <C-i> jumpnext
+bind <C-o> jumpprev
+bind <C-u> scrollpage -0.5
+bind <C-v> nmode ignore 1 mode normal
+bind <C-x> urlincrement -1
+bind <C-y> scrollline -10
+bind <Escape> composite mode normal ; hidecmdline
+bind <S-Escape> mode ignore
+bind <S-Insert> mode ignore
+bind = zoom 0.1 true
+bind >> tabmove +1
+bind B composite bmark | fillcmdline_tmp 2500 "Site bookmarked to Tmp"
+bind C tabclosealltoright
+bind D composite tabprev; tabclose #
+bind E tablast
+bind F hint -t
+bind G scrollto 100
+bind H back
+bind J scrollpage 0.33
+bind K scrollpage -0.33
+bind L forward
+bind M gobble 1 quickmark
+bind O current_url open
+bind P clipboard tabopen
+bind R reloadhard
+bind S fillcmdline tabopen search
+bind T current_url tabopen
+bind U undo window
+bind W tabfirst
+bind ZZ qall
+bind ^ scrollto 0 x
+bind ` tab #
+bind a fillcmdline tabopen
+bind b fillcmdline bmarks -t
+bind d tabduplicate
+bind f hint
+bind g<Space> tab #
+bind g$ tablast
+bind g0 tabfirst
+bind g; changelistjump -1
+bind g? rot13
+bind gF hint -qb
+bind gT tabprev
+bind gU urlroot
+bind g^ tabfirst
+bind ga tabopen https://artstation.com
+bind gd tabnew about:downloads
+bind gf viewsource
+bind gg scrollto 0
+bind gh home true
+bind gi focusinput -l
+bind gm tabopen https://mail.google.com/mail/u/0/#inbox
+bind go tabopen https://odysee.com/
+bind gr reader
+bind gs tabaudio
+bind gt tabnext_gt
+bind gu fillcmdline undo
+bind gx$ tabclosealltoright
+bind gx0 tabclosealltoleft
+bind gy tabopen https://www.youtube.com/
+bind h tabprev
+bind i focusinput -l
+bind j scrollpage 0.25
+bind k scrollpage -0.25
+bind l tabnext
+bind o fillcmdline open
+bind p clipboard open
+bind q tabclose
+bind r reload
+bind s stop
+bind t fillcmdline tabopen
+bind u undo
+bind v hint -W mpvsafe
+bind w fillcmdline tab
+bind yc clipboard yankcanon
+bind ym clipboard yankmd
+bind ys clipboard yankshort
+bind yt clipboard yanktitle
+bind yy clipboard yank
+bind zI zoom 3
+bind zM zoom 0.5 true
+bind zO zoom 0.3
+bind zR zoom -0.5 true
+bind zc tabopen about:config
+bind zi zoom 0.1 true
+bind zm zoom 0.5 true
+bind zn fillcmdline tabrename
+bind zo zoom -0.1 true
+bind zp pin
+bind zr reader
+bind zz zoom 1
+bind --mode=insert <C-a> text.beginning_of_line
+bind --mode=insert <C-e> text.end_of_line
+bind --mode=insert <C-h> text.backward_word
+bind --mode=insert <C-k> text.kill_line
+bind --mode=insert <C-l> text.forward_word
+bind --mode=insert <C-u> text.backward_kill_line
+bind --mode=insert <C-w> text.kill_word
+bind --mode=ex <ArrowDown> ex.next_completion
+bind --mode=ex <ArrowUp> ex.prev_completion
+bind --mode=ex <C-Enter> ex.execute_ex_on_completion
+bind --mode=ex <C-[> ex.hide_and_clear
+bind --mode=ex <C-a> text.beginning_of_line
+bind --mode=ex <C-e> text.end_of_line
+bind --mode=ex <C-f> ex.complete
+bind --mode=ex <C-h> text.backward_word
+bind --mode=ex <C-j> ex.accept_line
+bind --mode=ex <C-k> text.kill_line
+bind --mode=ex <C-l> text.forward_word
+bind --mode=ex <C-m> ex.accept_line
+bind --mode=ex <C-o>yy ex.execute_ex_on_completion_args clipboard yank
+bind --mode=ex <C-u> text.backward_kill_line
+bind --mode=ex <C-w> text.kill_word
+bind --mode=ex <Delete> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <Enter> ex.accept_line
+bind --mode=ex <Escape> ex.hide_and_clear
+bind --mode=ex <S-ArrowDown> ex.next_history
+bind --mode=ex <S-ArrowUp> ex.prev_history
+bind --mode=ex <S-Backspace> text.backward_kill_word
+bind --mode=ex <S-Del> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <S-Delete> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <S-Tab> ex.prev_completion
+bind --mode=ex <Space> ex.insert_space_or_completion
+bind --mode=ex <Tab> ex.next_completion
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
