@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/rat/stuff/walls/abstract/dna.png' 
+feh --no-fehbg --bg-fill "$HOME/stuff/walls/dna.png"
