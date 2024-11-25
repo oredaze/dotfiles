@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<!-- System menu -->
+<menu id="system-menu" label="Openbox">
+
+	<item label="autostart">
+		<action name="Execute">
+			<command>st -e nvim ~/.config/openbox/autostart</command>
+		</action>
+	</item>
+
+	<item label="menu.xml">
+		<action name="Execute">
+			<command>st -e nvim ~/.config/openbox/menu.xml</command>
+		</action>
+	</item>
+
+	<item label="r_c.xml">
+		<action name="Execute">
+			<command>st -e nvim ~/.config/openbox/rc.xml</command>
+		</action>
+	</item>
+
+	<item label="themerc">
+		<action name="Execute">
+			<command>st -e nvim ~/.themes/OpenMAC/openbox-3/themerc</command>
+		</action>
+	</item>
+
+<separator />
+
+	<item label="Reconfigure Openbox">
+		<action name="Reconfigure" />
+	</item>
+
+	<item label="Quit">
+		<action name="Exit">
+			<prompt>yes</prompt>
+		</action>
+	</item>
+
+</menu>
+
+<!-- Applications -->
+<menu id="app-menu" label="Apps">
+
+	<item label="Zellij">
+		<action name="Execute">
+			<command>jumpapp -c Zellij gtk-launch zellij</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Explorer">
+		<action name="Execute">
+			<command>jumpapp -c Thunar gtk-launch thunar</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Web">
+		<action name="Execute">
+			<command>jumpapp -c Firefox gtk-launch firefox</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Dosbox">
+		<action name="Execute">
+			<command>jumpapp -c dosbox-x gtk-launch dosbox-x</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Godot">
+		<action name="Execute">
+			<command>jumpapp -c Godot gtk-launch godot</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Tixati">
+		<action name="Execute">
+			<command>jumpapp -c Tixati gtk-launch tixati</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Mail">
+		<action name="Execute">
+			<command>jumpapp -c Mutt gtk-launch mutt</command>
+		</action>
+	</item>
+
+	<item label="Youtube">
+		<action name="Execute">
+			<command>jumpapp -c Ytfzf gtk-launch ytfzf</command>
+		</action>
+	</item>
+
+	<item label="mcomix_J">
+		<action name="Execute">
+			<command>jumpapp -c MComix gtk-launch mcomix</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Notes">
+		<action name="Execute">
+			<command>jumpapp -c Notes gtk-launch notes</command>
+		</action>
+	</item>
+
+	<item label="Art">
+		<action name="Execute">
+			<command>jumpapp -c Geeqie gtk-launch art</command>
+		</action>
+	</item>
+
+	<item label="ase_Prite">
+		<action name="Execute">
+			<command>jumpapp -c aseprite gtk-launch aseprite</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Krita">
+		<action name="Execute">
+			<command>jumpapp -c krita gtk-launch org.kde.krita</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Bluetooth">
+		<action name="Execute">
+			<command>blueman-manager</command>
+		</action>
+	</item>
+
+	<item label="Reaper">
+		<action name="Execute">
+			<command>jumpapp -c reaper gtk-launch reaper</command>
+		</action>
+	</item>
+
+	<item label="Finances">
+		<action name="Execute">
+			<command>jumpapp -c TradingView gtk-launch tradingview</command>
+		</action>
+	</item>
+
+	<item label="Calc">
+		<action name="Execute">
+			<command>jumpapp -c SpeedCrunch gtk-launch speedcrunch</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Video">
+		<action name="Execute">
+			<command>jumpapp -c mpv mpv --idle</command>
+			<startupnotify><enabled>no</enabled></startupnotify>
+		</action>
+	</item>
+
+	<item label="Internet">
+		<action name="Execute">
+			<command>iwgtk</command>
+		</action>
+	</item>
+
+	<item label="Levels">
+		<action name="Execute">
+			<command>jumpapp -c Pavucontrol pavucontrol</command>
+		</action>
+	</item>
+
+</menu>
+
+<!-- Snap menu -->
+<menu id="snap-menu" label="Snap">
+
+	<item label="1:   ║'  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>80%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>43%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>6%</x>
+			<y>center</y>
+		</action>
+	</item>
+
+	<item label="2:   ╚╗  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>85%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>43%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>center</y>
+		</action>
+	</item>
+
+	<item label="3:   '║  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>80%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>43%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>-6%</x>
+			<y>center</y>
+		</action>
+	</item>
+
+	<item label="Q:   ═╝  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>50%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>50%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>0</x>
+			<y>0</y>
+		</action>
+	</item>
+
+	<item label="A:   ║+  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>100%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>50%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>0</x>
+			<y>0</y>
+		</action>
+	</item>
+
+	<item label="Z:   ═╗  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>50%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>50%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>0</x>
+			<y>-0</y>
+		</action>
+	</item>
+
+	<item label="W:   ╚╝  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>50%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>100%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>0</y>
+		</action>
+	</item>
+
+	<item label="S:   ║║  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>100%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>50%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>0</y>
+		</action>
+	</item>
+
+	<item label="X:   ╔╗  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>50%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>100%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>-0</y>
+		</action>
+	</item>
+
+	<item label="E:   ╚═  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>50%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>50%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>-0</x>
+			<y>0</y>
+		</action>
+	</item>
+
+	<item label="D:   +║  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>100%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>50%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>-0</x>
+			<y>0</y>
+		</action>
+	</item>
+
+	<item label="C:   ╔═  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>50%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>50%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>-0</x>
+			<y>-0</y>
+		</action>
+	</item>
+
+	<item label="F:   ══  ">
+		<action name="Unmaximize"/>
+		<action name="Decorate"/>
+		<action name="MoveResizeTo">
+			<height>86%</height>
+		</action>
+		<action name="MoveResizeTo">
+			<width>75%</width>
+		</action>
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>center</y>
+		</action>
+	</item>
+
+</menu>
+
+<!-- Send to menu -->
+<menu id="send-menu" label="to _Desktop">
+
+	<item label="‒› 1">
+		<action name="SendToDesktop">
+			<to>1</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 2">
+		<action name="SendToDesktop">
+			<to>2</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 3">
+		<action name="SendToDesktop">
+			<to>3</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 4">
+		<action name="SendToDesktop">
+			<to>4</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 5">
+		<action name="SendToDesktop">
+			<to>5</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 6">
+		<action name="SendToDesktop">
+			<to>6</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 7">
+		<action name="SendToDesktop">
+			<to>7</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 8">
+		<action name="SendToDesktop">
+			<to>8</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+
+	<item label="‒› 9">
+		<action name="SendToDesktop">
+			<to>8</to>
+			<follow>no</follow>
+			<wrap>no</wrap>
+		</action>
+	</item>
+</menu>
+
+<!-- Window menu -->
+<menu id="win-menu" label="Window">
+
+	<item label="Lower">
+		<action name="Lower"/>
+		<action name="FocusToBottom"/>
+		<!-- <action name="Unfocus"/> -->
+	</item>
+
+<separator />
+
+	<menu id="send-menu"/>
+
+<separator />
+
+	<item label="Global">
+		<action name="ToggleOmnipresent"/>
+	</item>
+
+	<item label="Top layer">
+		<action name="SendToLayer"><layer>top</layer></action>
+	</item>
+
+	<item label="Mid layer">
+		<action name="SendToLayer"><layer>normal</layer></action>
+	</item>
+
+	<item label="Bottom layer">
+		<action name="SendToLayer"><layer>bottom</layer></action>
+	</item>
+
+<separator />
+
+	<menu id="snap-menu"/>
+
+<separator />
+
+	<item label="Fullscreen">
+		<action name="ToggleFullscreen"/>
+	</item>
+
+	<item label="Zoom">
+		<action name="ToggleDecorations"/>
+		<action name="ToggleMaximizeFull"/>
+	</item>
+
+	<item label="Xminimize">
+		<action name="Iconify"/>
+	</item>
+
+	<item label="d_Ecorations">
+		<action name="ToggleDecorations"/>
+	</item>
+
+<separator />
+
+	<item label="Quit">
+		<action name="Close"/>
+	</item>
+
+</menu>
+
+<!-- Omni menu -->
+<menu id="omni-menu" label="Omni Menu">
+<!-- <separator label="&lt; Omni Menu &gt;" /> -->
+
+	<menu id="client-list-menu"/>
+
+	<menu id="app-menu"/>
+
+<separator />
+
+	<item label="Screenshot">
+		<action name="Execute">
+			<command>scrot -d 1</command>
+		</action>
+	</item>
+
+	<item label="Kana">
+		<action name="Execute">
+			<command>nsxiv -g 670x655 /vault/stuff/kana.gif</command>
+		</action>
+	</item>
+
+<separator />
+
+	<item label="Picom toggle">
+		<action name="Execute">
+			<command>picom.sh --toggle &</command>
+		</action>
+	</item>
+
+	<menu id="win-menu"/>
+
+	<menu id="system-menu"/>
+
+	<menu id="power-menu"/>
+
+</menu>
+
+</openbox_menu>
