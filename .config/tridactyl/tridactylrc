@@ -1,0 +1,272 @@
+" General Settings
+set update.lastchecktime 1597790056788
+set update.checkintervalsecs 86400
+set update.lastnaggedversion 1.14.0
+set update.nag true
+set update.nagwait 7
+set configversion 2.0
+set hintchars wersdfcvlkj
+set hintuppercase false
+set homepages.0 https://oredaze.github.io/homepage/
+set minincsearchlen 2
+set modeindicator false
+set smoothscroll true
+set tabopenpos last
+set visualenterauto false
+set allowautofocus false
+set theme quaked
+set searchurls.13 https://1337x.to/search/%s/1/
+set searchurls.g https://www.google.com/search?q=%s
+set searchurls.b https://search.brave.com/search?q=%s
+set searchurls.s https://search.hbubli.cc/search?q=%s
+set searchurls.y https://yandex.ru/search?text=%s
+set searchurls.gi https://www.google.com/search?q=%s&source=lnms&tbm=isch
+set searchurls.d https://duckduckgo.com/?q=%s
+set searchurls.e https://www.ecosia.org/search?q=%s
+set searchurls.gm https://www.google.com/maps?q=%s
+set searchurls.yt https://www.youtube.com/results?search_query=%s
+set searchurls.me https://www.metal-archives.com/search?searchString=%s&type=band_name
+set searchurls.ad https://anidb.net/anime/?adb.search=%s&do.update=Search&noalias=1&type.movie=1&type.ova=1&type.tvseries=1&type.tvspecial=1&type.web=1
+set searchurls.ma https://www.mangaupdates.com/series.html?search=%s&stype=title&orderby=rating&exclude_genre=Doujinshi_Hentai_Lolicon_Shotacon_Yaoi_Yuri&perpage=25
+set searchurls.za http://zelka.org/browse.php?search=%s&cat=0&incldead=1&in=name
+set searchurls.ny https://nyaa.si/?f=0&c=1_2&q=%s
+set searchurls.vo https://docs.voidlinux.org/about/index.html?search=%s
+set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=%s
+set searchurls.au https://aur.archlinux.org/packages/?O=0&K=%s
+set searchurls.ca https://crates.io/search?q=%s
+set searchurls.od https://www.oxfordlearnersdictionaries.com/search/english/?q=%s
+set searchurls.pd https://www.protondb.com/search?q=%s
+set searchurls.pb https://thepiratebay.org/search.php?q=%s&all=on&search=Pirate+Search&page=0&orderby=
+set searchurls.bi https://www.bing.com/search?q=%s
+set searchurls.y https://search.yahoo.com/search?p=%s
+set searchurls.tw https://twitter.com/search?q=%s
+set searchurls.wi https://en.wikipedia.org/wiki/Special:Search/
+set searchurls.gh https://github.com/search?utf8=✓&q=%s
+set searchurls.gp https://packages.gentoo.org/packages/search?q=%s
+set searchurls.gw https://wiki.gentoo.org/index.php?title=Special%3ASearch&profile=default&fulltext=Search&search=%s
+
+" Binds
+unbind <<
+unbind >>
+bind 0 zoom 1
+bind $ scrollto 100 x
+bind - zoom -0.1 true
+bind , back
+bind . forward
+bind ' gobble 1 markjump
+bind ` gobble 1 markjump
+bind H tabmove -1
+bind L tabmove +1
+bind : fillcmdline_notrail
+bind ;# hint -#
+bind ;; hint -; *
+bind ;A hint -A
+bind ;I hint -i
+bind ;M composite hint -pipe img src | jsb -p tri.excmds.tabopen('images.google.com/searchbyimage?image_url=' + JS_ARG)
+bind ;O hint -W fillcmdline_notrail open
+bind ;P hint -P
+bind ;S hint -S
+bind ;T hint -W fillcmdline_notrail tabopen
+bind ;W hint -W fillcmdline_notrail winopen
+bind ;a hint -a
+bind ;b hint -b
+bind ;g# hint -q#
+bind ;g; hint -q;
+bind ;gA hint -qA
+bind ;gF hint -qb
+bind ;gI hint -qI
+bind ;gP hint -qP
+bind ;gS hint -qS
+bind ;ga hint -qa
+bind ;gb hint -qb
+bind ;gf hint -q
+bind ;gi hint -qi
+bind ;gk hint -qk
+bind ;gp hint -qp
+bind ;gr hint -qr
+bind ;gs hint -qs
+bind ;gv hint -qW mpvsafe
+bind ;gw hint -qw
+bind ;gy hint -qy
+bind ;h hint -h
+bind ;i hint -I
+bind ;k hint -k
+bind ;m composite hint -pipe img src | js -p tri.excmds.open('images.google.com/searchbyimage?image_url=' + JS_ARG)
+bind ;o hint
+bind ;p hint -p
+bind ;r hint -r
+bind ;s hint -a
+bind ;t hint -W tabopen
+bind ;v hint -W mpvsafe
+bind ;w hint -w
+bind ;y hint -y
+bind ;z hint -z
+bind zm mute toggle
+bind <C-1> nmode ignore 1 mode normal
+bind <Tab> js -d€ tri.excmds.tab(JS_ARGS.join("") != "" ? JS_ARGS.join("") : "#")€
+bind <AC-Escape> mode ignore
+bind <AC-`> mode ignore
+bind <Backspace> nohlsearch
+bind <C-[> composite mode normal ; hidecmdline
+bind <C-a> urlincrement 1
+bind <C-b> fillcmdline tab
+bind <C-d> scrollpage 0.5
+bind <C-e> scrollline 10
+unbind <C-f>
+bind <C-i> jumpnext
+bind <C-o> jumpprev
+bind <C-r> reloadhard
+bind <C-u> scrollpage -0.5
+bind <C-v> nmode ignore 1 mode normal
+bind <C-x> urlincrement -1
+bind <C-y> scrollline -10
+bind <Escape> composite mode normal ; hidecmdline
+bind <S-Escape> mode ignore
+bind <S-Insert> mode ignore
+bind = zoom 0.1 true
+bind / fillcmdline find
+bind * findselect
+bind B composite bmark | fillcmdline_tmp 2500 "Site bookmarked to Tmp"
+bind D composite tabprev; tabclose #
+bind F hint -t
+bind G scrollto 100
+bind M gobble 1 quickmark
+bind N findnext --search-from-view --reverse
+bind P clipboard tabopen
+bind R reloadhard
+bind s fillcmdline taball
+" bind ? fillcmdline tabopen search
+bind T current_url tabopen
+bind U fillcmdline undo
+bind ZZ qall
+bind ^ scrollto 0 x
+bind a fillcmdline tabopen
+bind b fillcmdline bmarks -t
+bind d tabduplicate
+bind e current_url open
+bind f hint
+bind g1 tab 1
+bind g2 tab 2
+bind g3 tab 3
+bind g4 tab 4
+bind g5 tab 5
+bind g6 tab 6
+bind g7 tab 7
+bind g8 tab 8
+bind g9 tab 9
+bind g0 tab 10
+bind g; changelistjump -1
+bind g? rot13
+bind gF hint -qb
+bind gT tabprev
+bind gR urlroot
+bind gU tabopen --focus-address-bar
+bind g^ tabfirst
+bind ga tabopen https://artstation.com
+bind gb tab #
+bind gc tabopen https://chat.openai.com/chat
+bind gn tabopen https://excalidraw.com
+bind gd !s xdotool key Ctrl+Shift+Y
+bind gf viewsource
+bind gg scrollto 0
+bind gh home true
+bind gi focusinput -l
+bind gm tabopen https://mail.google.com/mail/u/0/#inbox
+bind go tabopen https://odysee.com/
+bind gr reader
+bind gs tabaudio
+bind gt tabnext_gt
+bind gx tabopen https://x.com
+bind gy tabopen https://www.youtube.com/
+bind gP winopen -private https://rule34.xxx/index.php?page=post&s=list&tags=futanari
+bind c fillcmdline open
+bind h tabprev
+bind i focusinput -l
+bind j scrollpage 0.2
+bind k scrollpage -0.2
+bind l tabnext
+bind n findnext --search-from-view
+bind p clipboard open
+bind t tab moz-extension://be3404ea-bc74-46de-995d-26b4def36135/view.html
+" bind ? composite fillcmdline taball panorama ; ex.accept_line
+bind q tabclose
+bind r reload
+bind x stop
+bind u undo
+bind v hint -W mpvsafe
+bind w tablast
+bind yc clipboard yankcanon
+bind ym clipboard yankmd
+bind ys clipboard yankshort
+bind yt clipboard yanktitle
+bind yy clipboard yank
+bind zI zoom 3
+bind zO zoom 0.3
+bind zR zoom -0.5 true
+bind zc tabopen about:config
+bind zd !s xdotool key Alt+c
+bind zi zoom 0.1 true
+bind zn fillcmdline tabrename
+bind zo zoom -0.1 true
+bind zp pin
+bind zr reader
+bind zz zoom 1
+bind ;x hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool click 1")}
+bind ;X hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool keydown ctrl+shift; xdotool click 1; xdotool keyup ctrl+shift")}
+bind <F1> help
+bind yo clipboard yankorg
+bind gH home true
+bind g! jumble
+bind ;K hint -K
+bind ;Y hint -cF img i => tri.excmds.yankimage(tri.urlutils.getAbsoluteURL(i.src))
+bind ;V hint -V
+bind A bmark
+bind <AS-ArrowUp><AS-ArrowUp><AS-ArrowDown><AS-ArrowDown><AS-ArrowLeft><AS-ArrowRight><AS-ArrowLeft><AS-ArrowRight>ba open https://www.youtube.com/watch?v=M3iOROuTuMA
+bind m gobble 1 markadd
+bind --mode=browser q tabclose
+bind --mode=insert <C-a> text.beginning_of_line
+bind --mode=insert <C-e> text.end_of_line
+bind --mode=insert <C-h> text.backward_word
+bind --mode=insert <C-k> text.kill_line
+bind --mode=insert <C-l> text.forward_word
+bind --mode=insert <C-u> text.backward_kill_line
+bind --mode=insert <C-w> text.kill_word
+bind --mode=insert <Escape> composite unfocus | mode normal
+bind --mode=insert <C-[> composite unfocus | mode normal
+bind --mode=insert <C-i> editor
+bind --mode=insert <AC-Escape> mode normal
+bind --mode=insert <AC-`> mode normal
+bind --mode=insert <S-Escape> mode ignore
+bind --mode=ex <ArrowDown> ex.next_completion
+bind --mode=ex <ArrowUp> ex.prev_completion
+bind --mode=ex <C-Enter> ex.execute_ex_on_completion
+bind --mode=ex <C-[> ex.hide_and_clear
+bind --mode=ex <C-a> text.beginning_of_line
+bind --mode=ex <C-e> text.end_of_line
+bind --mode=ex <C-f> ex.complete
+bind --mode=ex <C-h> text.backward_word
+bind --mode=ex <C-j> ex.accept_line
+bind --mode=ex <C-k> text.kill_line
+bind --mode=ex <C-l> text.forward_word
+bind --mode=ex <C-m> ex.accept_line
+bind --mode=ex <C-o>yy ex.execute_ex_on_completion_args clipboard yank
+bind --mode=ex <C-u> text.backward_kill_line
+bind --mode=ex <C-w> text.kill_word
+bind --mode=ex <Delete> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <Enter> ex.accept_line
+bind --mode=ex <Escape> ex.hide_and_clear
+bind --mode=ex <S-ArrowDown> ex.next_history
+bind --mode=ex <S-ArrowUp> ex.prev_history
+bind --mode=ex <S-Backspace> text.backward_kill_word
+bind --mode=ex <S-Delete> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <S-Tab> ex.prev_completion
+bind --mode=ex <Space> ex.insert_space_or_completion
+bind --mode=ex <Tab> ex.next_completion
+bind --mode=ex <S-Del> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <A-b> text.backward_word
+bind --mode=ex <A-f> text.forward_word
+bind --mode=ex <A-d> text.kill_word
+bind --mode=ex <C-Space> ex.insert_space
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
