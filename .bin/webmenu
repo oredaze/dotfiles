@@ -1,0 +1,75 @@
+#!/bin/sh
+
+# Websearch menu script using keywords; supports bookmars from a file
+# For dmenu/fuzzel/etc. (set your own)
+# By corvian
+# License: 0BSD
+
+# TODO make search strings literal
+
+readonly bookmark_file="${XDG_CONFIG_HOME:-$HOME/.config}/quickmarks"
+
+# Create the list of bookmarks
+create_menu() {
+    while IFS= read -r url; do
+        printf '%s\n' "$url"
+    done < "$bookmark_file"
+}
+
+if [ -n "$WAYLAND_DISPLAY" ] && command -v fuzzel >/dev/null 2>&1; then
+    get_text=$(create_menu | fuzzel -d -w 80 -l 20 -p "Web: ")
+elif [ -n "$DISPLAY" ] && command -v dmenu >/dev/null 2>&1; then
+    get_text=$(create_menu | dmenu -c -l 20 -p "Web:")
+fi
+
+url=$get_text
+# Remove prefix
+url="http${url#*http}"
+
+# Check if menu was closed (return code 1) or if the user pressed Escape (return code 255)
+[ $? -ne 0 ] && exit 0
+
+search_engine=$(printf '%s' "$get_text" | cut -d ' ' -f 1)
+search_word=$(printf '%s' "$get_text" | cut -d ' ' -f 2-)
+
+case $search_engine in
+    "s") browser_cmd="$BROWSER \"https://search.rhscz.eu/search?q=$search_word&category_general=1&language=auto&time_range=&safesearch=1&theme=simple\"" ;;
+    "g") browser_cmd="$BROWSER \"https://www.google.com/search?q=$search_word\"" ;;
+    "d") browser_cmd="$BROWSER \"https://duckduckgo.com/lite?q=$search_word\"" ;;
+    "b") browser_cmd="$BROWSER \"https://search.brave.com/search?q=$search_word\"" ;;
+    "y") browser_cmd="$BROWSER \"https://yandex.ru/search?text=$search_word\"" ;;
+    "e") browser_cmd="$BROWSER \"https://www.ecosia.org/search?q=$search_word\"" ;;
+    "m") browser_cmd="$BROWSER \"https://www.bing.com/search?q=$search_word\"" ;;
+    "13") browser_cmd="$BROWSER \"https://1337x.to/search/$search_word/1/\"" ;;
+    "ad") browser_cmd="$BROWSER \"https://anidb.net/anime/?adb.search=$search_word&do.update=Search&noalias=1&type.movie=1&type.ova=1&type.tvseries=1&type.tvspecial=1&type.web=1\"" ;;
+    "au") browser_cmd="$BROWSER \"https://aur.archlinux.org/packages/?O=0&K=$search_word\"" ;;
+    "aw") browser_cmd="$BROWSER \"https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=$search_word\"" ;;
+    "ca") browser_cmd="$BROWSER \"https://crates.io/search?q=$search_word\"" ;;
+    "fh") browser_cmd="$BROWSER \"https://flathub.org/apps/search?q=$search_word\"" ;;
+    "gh") browser_cmd="$BROWSER \"https://github.com/search?utf8=✓&q=$search_word\"" ;;
+    "gi") browser_cmd="$BROWSER \"https://www.google.com/search?q=$search_word&source=lnms&tbm=isch\"" ;;
+    "gm") browser_cmd="$BROWSER \"https://www.google.com/maps?q=$search_word\"" ;;
+    "gp") browser_cmd="$BROWSER \"https://packages.gentoo.org/packages/search?q=$search_word\"" ;;
+    "gw") browser_cmd="$BROWSER \"https://wiki.gentoo.org/index.php?title=Special%3ASearch&profile=default&fulltext=Search&search=$search_word\"" ;;
+    "go") browser_cmd="$BROWSER \"https://gpo.zugaina.org/Search?search=$search_word\"" ;;
+    "ma") browser_cmd="$BROWSER \"https://www.mangaupdates.com/series.html?search=$search_word&stype=title&orderby=rating&exclude_genre=Doujinshi_Hentai_Lolicon_Shotacon_Yaoi_Yuri&perpage=25\"" ;;
+    "me") browser_cmd="$BROWSER \"https://www.metal-archives.com/search?searchString=$search_word&type=band_name\"" ;;
+    "ny") browser_cmd="$BROWSER \"https://nyaa.si/?f=0&c=1_2&q=$search_word\"" ;;
+    "od") browser_cmd="$BROWSER \"https://www.oxfordlearnersdictionaries.com/search/english/?q=$search_word\"" ;;
+    "pb") browser_cmd="$BROWSER \"https://thepiratebay.org/search.php?q=$search_word&all=on&search=Pirate+Search&page=0&orderby=\"" ;;
+    "pd") browser_cmd="$BROWSER \"https://www.protondb.com/search?q=$search_word\"" ;;
+    "rb") browser_cmd="$BROWSER \"https://rawkbawx.rocks/torrents.php?search=$search_word\"" ;;
+    "sb") browser_cmd="$BROWSER \"http://slackbuilds.org/result/?search=$search_word&sv=15.0\"" ;;
+    "vo") browser_cmd="$BROWSER \"https://docs.voidlinux.org/about/index.html?search=$search_word\"" ;;
+    "wi") browser_cmd="$BROWSER \"https://en.wikipedia.org/w/index.php?search=$search_word\"" ;;
+    "yt") browser_cmd="$BROWSER \"https://www.youtube.com/results?search_query=$search_word\"" ;;
+    "za") browser_cmd="$BROWSER \"http://zelka.org/browse.php?search=$search_word&cat=0&incldead=1&in=name\"" ;;
+    "de") browser_cmd="$BROWSER \"https://dexscreener.com/solana/$search_word\"" ;;
+    "ci") browser_cmd="$BROWSER \"https://app.cielo.finance/profile/$search_word?timeframe=30d&tab=tokenpnl\"" ;;
+    "pu") browser_cmd="$BROWSER \"https://pump.fun/$search_word\"" ;;
+    "") ;;
+    *) $BROWSER "$url"
+esac
+
+# Executing browser command if not empty
+[ -n "$browser_cmd" ] && eval "$browser_cmd"

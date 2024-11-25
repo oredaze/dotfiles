@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -n "$WAYLAND_DISPLAY" ] && command -v fuzzel >/dev/null 2>&1; then
+    waylock -ignore-empty-password -init-color 0x000000 -input-color 0x121212 -fail-color 0x140000
+elif [ -n "$DISPLAY" ] && command -v dmenu >/dev/null 2>&1; then
+    xlock -mono -bg black -fg gray -mode bat -count 3
+fi
+

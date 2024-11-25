@@ -1,0 +1,43 @@
+#!/bin/bash
+
+case "$1" in
+    -f)
+        FILES=(
+            "$HOME/.bin/filemenu"
+            "$HOME/.bin/webmenu"
+            "$HOME/.config/quickmarks"
+            "$HOME/.config/mimeapps.list"
+            "$HOME/.xinitrc"
+            "$HOME/.zshrc"
+            "$HOME/.zprofile"
+            "$HOME/.mozilla/firefox/zd3eetro.void/chrome/userChrome.css"
+            "$HOME/.mozilla/firefox/zd3eetro.void/user.js"
+        )
+        ;;
+    -n)
+        FILES=(
+            "$HOME/$(fd -t f . ~/notes)"
+        )
+        ;;
+    *)
+        echo "use -f for files; -n for notes"
+        ;;
+esac
+
+if [ -n "$WAYLAND_DISPLAY" ] && command -v fuzzel >/dev/null 2>&1; then
+    MENU='fuzzel -d -l 35'
+elif [ -n "$DISPLAY" ] && command -v dmenu >/dev/null 2>&1; then
+    MENU='dmenu -c -l 35'
+fi
+
+if zellij list-sessions &> /dev/null; then
+    EDITOR='zellij edit'
+else
+    EDITOR=$TERMINAL' -e nvim'
+fi
+
+choice=$(printf '%s\n' "${FILES[@]}" | $MENU -p "Edit:")
+
+if [ $choice ]; then
+    $EDITOR ${choice}
+fi

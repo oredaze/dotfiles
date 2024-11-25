@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# elinks "duckduckgo.com/lite?q=$*"
+lynx "duckduckgo.com/lite?q=$*"
