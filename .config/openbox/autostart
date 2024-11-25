@@ -1,0 +1,13 @@
+~/.fehbg &
+pipewire &
+sleep 1s
+pipewire-pulse &
+sleep 1s
+wireplumber &
+picom -b &
+plank &
+dunst &
+xclip &
+mpd &
+polybar &
+sh print-wisdom-short.sh &
