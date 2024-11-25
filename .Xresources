@@ -1,0 +1,64 @@
+XTerm*termName:        xterm-256color
+XTerm*VT100.geometry:  100x40
+XTerm.vt100.locale:    false
+XTerm*vt100.utf8:      true
+XTerm*cursorBlink:     false
+XTerm*visualBell:      false
+XTerm*scrollTtyOutput: false
+XTerm*locale:          true
+XTerm*metaSendsEscape: false
+XTerm.vt100.metaSendsEscape: false
+XTerm*eightBitInput:   true
+XTerm*saveLines:       0
+XTerm*toolBar:         false
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes:        erase ^?
+XTerm.pointerShape:    left_ptr
+XTerm*background:      black
+XTerm*foreground:      white
+XTerm*font:            *-fixed-*-*-*-15-*
+
+! Xft.dpi:       110
+Xft.rgba:      none
+Xft.hinting:   true
+Xft.hintstyle: hintslight
+Xft.antialias: 1
+Xft.autohint:  0
+
+XCalc*font: -*-fixed-bold-r-*-*-15-*-*-*-*-*-iso10646-*
+XCalc.ti.*.background: #212121
+XCalc.ti.bevel.screen.*.background: #101010
+XCalc.ti.*.foreground: #CCCCCC
+XCalc.ti.bevel.screen.*.foreground: #575757
+XCalc.ti.bevel.screen.LCD.foreground: #CCCCCC
+XCalc.ti.Command.foreground: #575757
+XCalc.ti.Command.background: #303030
+XCalc.ti.button5.foreground: #575757
+XCalc.ti.button23.foreground: #575757
+XCalc.ti.button24.foreground: #575757
+XCalc.ti.button31.label: %
+XCalc.ti.button35.foreground: #575757
+XCalc.ti.button35.label: /
+XCalc.ti.button36.foreground: #575757
+XCalc.ti.button37.foreground: #CCCCCC
+XCalc.ti.button38.foreground: #CCCCCC
+XCalc.ti.button39.foreground: #CCCCCC
+XCalc.ti.button40.foreground: #575757
+XCalc.ti.button41.foreground: #575757
+XCalc.ti.button42.foreground: #CCCCCC
+XCalc.ti.button43.foreground: #CCCCCC
+XCalc.ti.button44.foreground: #CCCCCC
+XCalc.ti.button45.foreground: #575757
+XCalc.ti.button47.foreground: #CCCCCC
+XCalc.ti.button48.foreground: #CCCCCC
+XCalc.ti.button49.foreground: #CCCCCC
+XCalc.ti.button50.foreground: #575757
+XCalc.ti.button52.foreground: #CCCCCC
+XCalc.ti.button53.foreground: #CCCCCC
+XCalc.ti.button55.foreground: #575757
+
+*font xft:Scuffy
+Xcursor.theme: breeze-mod
+Xcursor.size: 30
+
+Nsxiv.window.background: #000000
