@@ -1,11 +1,11 @@
 :root {
-	--tridactyl-font-family: Liberation Mono;
+	--tridactyl-font-family: monospace;
 	--small-font-size: 12pt;
-	--large-font-size: 14pt;
-	--tridactyl-bg: #0D0D0D;
-	--tridactyl-focused-bg: #050505;
-	--tridactyl-focused-fg: #AD3D31;
-	--tridactyl-fg: #BFBFBF;
+	--large-font-size: 15pt;
+	--tridactyl-bg: #0e0e0e;
+	--tridactyl-focused-bg: #404040;
+	--tridactyl-focused-fg: #d9b27c;
+	--tridactyl-fg: #d9ceb8;
 	--tridactyl-url: #D9874C;
 	--tridactyl-hint-fg: #FFC56B;
 	--tridactyl-scrollbar-color: #131 var(--tridactyl-fg);
@@ -33,7 +33,7 @@
 	--tridactyl-hint-outline: 0px solid black;
 
 	/*completions*/
-	/* --tridactyl-cmplt-option-height: 1.5em; */
+	--tridactyl-cmplt-option-height: 1.6em;
 	--tridactyl-cmplt-fg: var(--tridactyl-fg);
 	--tridactyl-cmplt-bg: var(--tridactyl-bg);
 	--tridactyl-cmplt-font-family: var(--tridactyl-font-family);
@@ -42,7 +42,7 @@
 	/*commandline*/
 	--tridactyl-cmdl-bg: var(--tridactyl-bg);
 	--tridactyl-cmdl-fg: var(--tridactyl-fg);
-	--tridactyl-cmdl-line-height: 1.2em;
+	--tridactyl-cmdl-line-height: 1.4em;
 	--tridactyl-cmdl-font-family: var(--tridactyl-font-family);
 	--tridactyl-cmdl-font-size: var(--large-font-size);
 	
@@ -63,7 +63,7 @@
 }
 
 :root #tridactyl-colon::before {
-	content: "]";
+	content: ":";
 	font-size: var(--large-font-size);
 }
 
